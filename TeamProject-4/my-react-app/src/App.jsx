@@ -1,13 +1,14 @@
 import './App.css';
 import HelloWorld from './HelloWorld';
-
+import BackgroundImage from './BackgroundImage';
 function App() {
     return (
-        <>
-            <div className="bg-red-200">
+        <div>
+            <BackgroundImage />
+            <div className="main-content">
                 <HelloWorld />
             </div>
-        </>
+        </div>
     );
 }
 
