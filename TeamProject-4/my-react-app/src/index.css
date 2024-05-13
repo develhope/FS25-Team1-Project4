@@ -7,19 +7,72 @@
   background-size: cover;
   background-repeat: no-repeat;
 }*/
+
+.logo-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 3%;
+  right: 83%;
+  left: 4%;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: lighter;
+
+  .code-verse {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    height: 50px;
+  }
+
+  p {
+    font-size: 0.5rem;
+  }
+}
+
 .helloworld-div {
   position: absolute;
   z-index: 1;
-  top: 15%;
-  right: 35%;
-  left: 20%;
-  font-size: 10rem;
+  top: 23%;
+  right: 34%;
+  left: 22%;
+  font-size: 4rem;
 
-  h1 {
+  h1, h2, h3{
     color: rgb(255, 255, 255);
     text-shadow: #474747 3px 5px 2px;
   }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  h3 {
+    font-size: 7rem;
+  }
 }
+
+.navbar {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  right: 11%;
+  left: 17%;
+  font-size: 1rem;
+  font-weight: 400;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+}
+
 
 .divHeroImage {
   width: 100%;
