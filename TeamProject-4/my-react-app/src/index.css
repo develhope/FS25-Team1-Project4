@@ -41,20 +41,13 @@
   top: 23%;
   right: 34%;
   left: 22%;
-  font-size: 4rem;
+  font-size: 6rem;
 
   h1, h2, h3{
     color: rgb(255, 255, 255);
     text-shadow: #474747 3px 5px 2px;
   }
 
-  h2 {
-    font-size: 5rem;
-  }
-
-  h3 {
-    font-size: 7rem;
-  }
 }
 
 .navbar {
