@@ -6,7 +6,7 @@ export default function BackgroundImage() {
     return (
         <div className="divHeroImage relative">
             <img className="heroImage" src={backgroundImage} />
-            <LoginForm className="absolute" />
+            {/* <LoginForm className="absolute" /> */}
         </div>
     );
 }

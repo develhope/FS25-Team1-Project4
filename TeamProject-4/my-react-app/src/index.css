@@ -14,15 +14,15 @@
   align-items: center;
   position: absolute;
   z-index: 1;
-  top: 3%;
-  right: 83%;
-  left: 4%;
+  right: 80%;
+  left: 5%;
   font-size: 1.5rem;
   font-style: italic;
   font-weight: lighter;
 
   .code-verse {
     display: flex;
+    flex-direction: column;
     align-items: center;
   }
 

@@ -4,14 +4,16 @@ import BackgroundImage from './BackgroundImage';
 import { NavbarDefault } from './components/NavbarDefault';
 import LogoPage from './LogoPage';
 import LoginForm from './components/LoginForm';
+import LoginPage from './pages/LoginPage';
 function App() {
     return (
         <div>
             <LogoPage></LogoPage>
             <div className="main-content">
-                <BackgroundImage />
+                {/* <BackgroundImage />
                 <HelloWorld />
-                <NavbarDefault />
+                <NavbarDefault /> */}
+                <LoginPage />
             </div>
         </div>
     );

@@ -7,9 +7,7 @@ export default function LogoPage() {
             <div className="code-verse">
                 <img src={logopng} alt="" />
                 <h1>CodeVerse</h1>
-            </div>
-            <div>
-                <p>Powered by Develhope</p>
+                <p> Let's build something! </p>
             </div>
         </div>
     );
