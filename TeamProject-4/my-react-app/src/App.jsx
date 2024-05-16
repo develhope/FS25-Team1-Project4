@@ -7,7 +7,8 @@ import LoginForm from './components/LoginForm';
 import LoginPage from './pages/LoginPage';
 import Home from './Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Content from './Content';
+import Content from './pages/Content';
+import AboutAs from './pages/AboutAs';
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/content" element={<Content />} />
                         <Route path="/my-react-app/src/pages/LoginPage.jsx" element={<LoginPage />}></Route>
+                        <Route path="/my-react-app/src/pages/AboutAs.jsx" element={<AboutAs />} />
                     </Routes>
                     {/* <LoginPage /> */}
                 </div>
