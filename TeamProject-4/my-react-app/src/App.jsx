@@ -10,9 +10,9 @@ function App() {
         <div>
             <LogoPage></LogoPage>
             <div className="main-content">
-                {/* <BackgroundImage />
+                <BackgroundImage />
                 <HelloWorld />
-                <NavbarDefault /> */}
+                <NavbarDefault />
                 <LoginPage />
             </div>
         </div>
