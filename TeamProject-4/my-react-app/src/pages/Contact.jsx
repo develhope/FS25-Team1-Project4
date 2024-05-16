@@ -7,7 +7,7 @@ export default function Contact() {
         <div>
             <BackgroundImage />
             <NavbarDefault />
-            <h1 className="text-4l"> CONTENUTO CONTACT</h1>
+            <h1 className="text-3xl absolute top-[20rem] left-[40rem]"> CONTENUTO CONTACT</h1>
         </div>
     );
 }

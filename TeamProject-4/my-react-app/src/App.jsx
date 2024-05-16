@@ -9,6 +9,7 @@ import Home from './Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Content from './pages/Content';
 import AboutAs from './pages/AboutAs';
+import Contact from './pages/Contact';
 
 function App() {
     return (
@@ -21,7 +22,7 @@ function App() {
                         <Route path="/content" element={<Content />} />
                         <Route path="/my-react-app/src/pages/LoginPage.jsx" element={<LoginPage />}></Route>
                         <Route path="/my-react-app/src/pages/AboutAs.jsx" element={<AboutAs />} />
-                        <Route path="/my-react-app/src/pages/Contact.jsx" element={<AboutAs />} />
+                        <Route path="/my-react-app/src/pages/Contact.jsx" element={<Contact />} />
                     </Routes>
                     {/* <LoginPage /> */}
                 </div>
