@@ -21,6 +21,7 @@ function App() {
                         <Route path="/content" element={<Content />} />
                         <Route path="/my-react-app/src/pages/LoginPage.jsx" element={<LoginPage />}></Route>
                         <Route path="/my-react-app/src/pages/AboutAs.jsx" element={<AboutAs />} />
+                        <Route path="/my-react-app/src/pages/Contact.jsx" element={<AboutAs />} />
                     </Routes>
                     {/* <LoginPage /> */}
                 </div>
