@@ -15,7 +15,7 @@ export default function Content() {
             <Link>
                 <Card
                     style={
-                        'bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6 mx-auto absolute bottom-[10rem] left-[14rem] transform -translate-x-1/2 -translate-y-1/2 w-[14rem] transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-blue-400 hover:to-teal-300'
+                        'bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6 mx-auto absolute bottom-[16rem] left-[22rem] transform -translate-x-1/2 -translate-y-1/2 w-[14rem] transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-blue-400 hover:to-teal-300'
                     }
                     imageUrl={Icona2}
                     text="Lessons"
@@ -33,7 +33,7 @@ export default function Content() {
             <Link>
                 <Card
                     style={
-                        'bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6 mx-auto absolute bottom-[10rem] right-[1rem] transform -translate-x-1/2 -translate-y-1/2 w-[14rem] transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-blue-400 hover:to-teal-300'
+                        'bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6 mx-auto absolute bottom-[16rem] right-[8rem] transform -translate-x-1/2 -translate-y-1/2 w-[14rem] transition-transform duration-300 ease-in-out transform hover:scale-105 hover:from-blue-400 hover:to-teal-300'
                     }
                     imageUrl={Icona3}
                     text="AI Learn"
