@@ -6,7 +6,6 @@ import Content from './pages/Content';
 import AboutAs from './pages/AboutAs';
 import Contact from './pages/Contact';
 import LoginPage from './pages/LoginPage';
-import Accordion from './components/Accordion';
 import Exercise from './pages/Exercise';
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
                         <Route path="/my-react-app/src/pages/Contact.jsx" element={<Contact />} />
                         <Route path="/my-react-app/src/pages/Exercise.jsx" element={<Exercise />} />
                     </Routes>
-                    {/* <LoginPage /> */}
                 </div>
             </Router>
         </div>
