@@ -5,10 +5,9 @@ import HomeText from '../components/HomeText';
 import { RandomImgHome } from '../components/RandomImgHome';
 
 const img = [
-    'https://placehold.co/300x400?text=Hello+World',
-    'https://placehold.co/300x400?text=Hello+World2',
-    'https://placehold.co/300x400?text=Hello+World3',
-    'https://placehold.co/300x400?text=Hello+World4',
+    'ragazzo-africano.png',
+    'ragazzo-asiatico.png',
+    'ragazzo-europeo.png',
 ]
 
 export default function Home() {
