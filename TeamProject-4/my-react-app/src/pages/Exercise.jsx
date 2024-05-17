@@ -1,8 +1,12 @@
 import React from 'react';
 import Accordion from '../components/Accordion';
 import BackgroundImage from '../components/BackgroundImage';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 
 function Exercise() {
+    const navigate = useNavigate();
+
     const topics = [
         {
             title: 'HTML',
@@ -204,6 +208,12 @@ function Exercise() {
                     <Accordion key={index} title={topic.title} exercises={topic.exercises} />
                 ))}
             </div>
+            <button
+                onClick={() => navigate(-1)}
+                className="absolute top-4 left-4 bg-blue-500 text-white p-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300"
+            >
+                <FaArrowLeft />
+            </button>
         </div>
     );
 }
