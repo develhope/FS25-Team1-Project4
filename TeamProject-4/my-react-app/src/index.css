@@ -8,6 +8,10 @@
   background-repeat: no-repeat;
 }*/
 
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
 .logo-page {
   display: flex;
   flex-direction: column;
