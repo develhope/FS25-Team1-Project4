@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 
 export function RandomImgHome({img}) {
 
+    //bisogna aggiungere immagini vere, ora ho messo dei placeholder
+
     const [randomIndex, setRandomIndex] = useState(null);
     const [randomImg, setRandomImg] = useState(null);
 
