@@ -8,6 +8,8 @@ const img = [
     'ragazzo-africano.png',
     'ragazzo-asiatico.png',
     'ragazzo-europeo.png',
+    'ragazzo-asiatico2.png',
+    'ragazza-asiatica.png',
 ]
 
 export default function Home() {
