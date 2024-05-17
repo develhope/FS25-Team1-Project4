@@ -7,6 +7,7 @@ import AboutAs from './pages/AboutAs';
 import Contact from './pages/Contact';
 import LoginPage from './pages/LoginPage';
 import Exercise from './pages/Exercise';
+import Lessons from './pages/Lessons';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                         <Route path="/my-react-app/src/pages/AboutAs.jsx" element={<AboutAs />} />
                         <Route path="/my-react-app/src/pages/Contact.jsx" element={<Contact />} />
                         <Route path="/my-react-app/src/pages/Exercise.jsx" element={<Exercise />} />
+                        <Route path="/my-react-app/src/pages/Lessons.jsx" element={<Lessons />} />
                     </Routes>
                 </div>
             </Router>
