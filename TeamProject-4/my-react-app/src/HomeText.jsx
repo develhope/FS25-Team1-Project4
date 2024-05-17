@@ -1,5 +1,7 @@
 import React from 'react';
 import Cins from './assets/ProvaHomeCinex.png';
+import Button from './components/ButtonStyled';
+import ButtonStyled from './components/ButtonStyled';
 
 export default function HomeText() {
     return (
@@ -8,12 +10,15 @@ export default function HomeText() {
                 Let's Learn New Course <span className="inline-block">Gain More Skills</span>
             </h1>
             <p className="absolute text-[#414b54] text-lg top-[30rem] right-[38rem] left-[10rem] w-full">
-                Explore Italy’s ground-breaking research and  
+                Explore Italy’s ground-breaking research and
                 <span className="block">education now. Watch this space, as eligible</span>
                 <span className="block">courses will continue to be added as they</span>
                 <span className="block">become available</span>
+                <ButtonStyled className="block" />
+                <ButtonStyled className="block" />
             </p>
-            <img src={Cins} alt="" className="absolute top-[8rem] left-[52rem] h-[40rem]" />
+
+            <img src={Cins} alt="" className="absolute top-[8rem] left-[55rem] h-[43rem]" />
         </div>
     );
 }

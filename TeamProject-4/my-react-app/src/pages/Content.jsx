@@ -11,7 +11,7 @@ export default function Content() {
     return (
         <div>
             <BackgroundImage />
-            <NavbarDefault />
+            {/* <NavbarDefault /> */}
             <Link>
                 <Card
                     style={

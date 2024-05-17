@@ -21,8 +21,6 @@
   right: 80%;
   left: 5%;
   font-size: 1.5rem;
-  font-style: italic;
-  font-weight: lighter;
 
   .code-verse {
     display: flex;
@@ -31,7 +29,7 @@
   }
 
   img {
-    height: 50px;
+    height: 70px;
   }
 
   p {

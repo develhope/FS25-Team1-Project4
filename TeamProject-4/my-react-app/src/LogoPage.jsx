@@ -9,7 +9,7 @@ export default function LogoPage() {
                 <Link to="/">
                     <img src={logopng} alt="" />
                 </Link>
-                <h1>CodeVerse</h1>
+                <h1 className="font-bold">CodeVerse</h1>
                 <p> Let's build something! </p>
             </div>
         </div>
