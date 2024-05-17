@@ -17,7 +17,7 @@ export default function HomeText() {
                 <ButtonStyled className="block" />
             </p>
 
-            <img src={Cins} alt="" className="absolute top-[8rem] left-[55rem] h-[43rem]" />
+            {/* <img src={Cins} alt="" className="absolute top-[8rem] left-[55rem] h-[43rem]" /> */}
         </div>
     );
 }
