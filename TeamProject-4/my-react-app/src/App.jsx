@@ -1,10 +1,6 @@
 import './App.css';
-import HelloWorld from './HomeText';
-import BackgroundImage from './BackgroundImage';
-import { NavbarDefault } from './components/NavbarDefault';
-import LogoPage from './LogoPage';
-import LoginForm from './components/LoginForm';
-import Home from './Home';
+import LogoPage from './components/LogoPage';
+import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Content from './pages/Content';
 import AboutAs from './pages/AboutAs';

@@ -1,7 +1,6 @@
 import React from 'react';
-import Cins from './assets/ProvaHomeCinex.png';
-import Button from './components/ButtonStyled';
-import ButtonStyled from './components/ButtonStyled';
+import Cins from '../assets/ProvaHomeCinex.png';
+import ButtonStyled from './ButtonStyled';
 
 export default function HomeText() {
     return (

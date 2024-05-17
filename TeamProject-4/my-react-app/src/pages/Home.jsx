@@ -1,8 +1,7 @@
 import React from 'react';
-import HelloWorld from './HomeText';
-import BackgroundImage from './BackgroundImage';
-import { NavbarDefault } from './components/NavbarDefault';
-import HomeText from './HomeText';
+import BackgroundImage from '../components/BackgroundImage';
+import { NavbarDefault } from '../components/NavbarDefault';
+import HomeText from '../components/HomeText';
 export default function Home() {
     return (
         <div>

@@ -1,6 +1,5 @@
 import React from 'react';
-import backgroundImage from './assets/backgroundImage_true.png';
-import LoginForm from './components/LoginForm';
+import backgroundImage from '../assets/backgroundImage_true.png';
 
 export default function BackgroundImage() {
     return (

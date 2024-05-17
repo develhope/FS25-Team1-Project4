@@ -1,5 +1,5 @@
 import React from 'react';
-import BackgroundImage from '../BackgroundImage';
+import BackgroundImage from '../components/BackgroundImage';
 import { NavbarDefault } from '../components/NavbarDefault';
 
 export default function Contact() {

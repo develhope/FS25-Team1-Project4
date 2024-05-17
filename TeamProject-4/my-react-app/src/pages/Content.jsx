@@ -1,7 +1,6 @@
 import React from 'react';
-import BackgroundImage from '../BackgroundImage';
-import Card from '../services/Card';
-import { NavbarDefault } from '../components/NavbarDefault';
+import BackgroundImage from '../components/BackgroundImage';
+import Card from '../components/Card';
 import Icona1 from '../assets/Rct.png';
 import Icona2 from '../assets/Exers.png';
 import Icona3 from '../assets/AI.png';
