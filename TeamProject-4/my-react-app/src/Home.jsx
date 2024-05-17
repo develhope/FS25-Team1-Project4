@@ -1,5 +1,5 @@
 import React from 'react';
-import HelloWorld from './HelloWorld';
+import HelloWorld from './HomeText';
 import BackgroundImage from './BackgroundImage';
 import { NavbarDefault } from './components/NavbarDefault';
 export default function Home() {

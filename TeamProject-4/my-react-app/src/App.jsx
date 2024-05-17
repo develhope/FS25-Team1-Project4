@@ -1,5 +1,5 @@
 import './App.css';
-import HelloWorld from './HelloWorld';
+import HelloWorld from './HomeText';
 import BackgroundImage from './BackgroundImage';
 import { NavbarDefault } from './components/NavbarDefault';
 import LogoPage from './LogoPage';
