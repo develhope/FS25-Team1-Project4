@@ -8,8 +8,8 @@ function Accordion({ title, exercises }) {
     };
 
     return (
-        <div className="border border-gray-300 rounded mb-4">
-            <div className="flex items-center justify-between px-4 py-2 cursor-pointer bg-gray-100" onClick={toggleAccordion}>
+        <div className="rounded mb-4">
+            <div className="flex items-center justify-between px-4 py-2 cursor-pointer bg-gray-100 rounded-[10px]" onClick={toggleAccordion}>
                 <h2 className="font-semibold">{title}</h2>
                 <span>{isOpen ? '-' : '+'}</span>
             </div>

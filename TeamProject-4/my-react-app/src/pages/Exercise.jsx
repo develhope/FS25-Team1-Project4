@@ -35,7 +35,7 @@ function Exercise() {
     return (
         <div>
             <BackgroundImage />
-            <div className="absolute top-[15rem] left-[5rem] container mx-auto p-4">
+            <div className="absolute bg-gradient-to-r from-teal-300 to-blue-400 rounded-[20px] top-[15rem] left-[5rem] container mx-auto p-4">
                 {topics.map((topic, index) => (
                     <Accordion key={index} title={topic.title} exercises={topic.exercises} />
                 ))}
