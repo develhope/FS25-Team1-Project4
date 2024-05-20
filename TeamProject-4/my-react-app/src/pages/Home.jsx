@@ -4,13 +4,7 @@ import { NavbarDefault } from '../components/NavbarDefault';
 import HomeText from '../components/HomeText';
 import { RandomImgHome } from '../components/RandomImgHome';
 
-const img = [
-    'ragazzo-africano.png',
-    'ragazzo-asiatico.png',
-    'ragazzo-europeo.png',
-    'ragazzo-asiatico2.png',
-    'ragazza-asiatica.png',
-]
+const img = ['ragazza-europea.png', 'ragazza-latina.png', 'ragazzo-asiatico.png', 'ragazzo-europeo.png'];
 
 export default function Home() {
     return (
@@ -18,7 +12,7 @@ export default function Home() {
             <BackgroundImage />
             <HomeText />
             <NavbarDefault />
-            <RandomImgHome img={img}/>
+            <RandomImgHome img={img} />
         </div>
     );
 }
