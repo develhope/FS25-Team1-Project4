@@ -3,7 +3,7 @@ import Accordion from '../components/Accordion';
 import BackgroundImage from '../components/BackgroundImage';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
-
+import CopyButton from '../components/CopyButton';
 function Exercise() {
     const navigate = useNavigate();
 
@@ -135,8 +135,8 @@ function Exercise() {
                     <b>1. Configurazione di Git: </b>Prima di iniziare a usare Git, è importante configurare il tuo nome utente e l'email. Questi
                     verranno associati ai tuoi commit.
                     <br />
-                    <code className="font-bold p-[2px] rounded-[5px]">
-                        git config --global user.name "Il tuo nome" / git config --global user.email "la.tua.email@example.com"
+                    <code className="font-bold">
+                        <CopyButton textToCopy="git config --global user.name Il tuo nome/git config --global user.email email@example.com"></CopyButton>
                     </code>
                 </p>,
                 <br />,
@@ -144,23 +144,31 @@ function Exercise() {
                     <b>2. Creare un Repository: </b>
                     Per iniziare a tracciare un progetto con Git, devi inizializzare un repository.
                     <br />
-                    <code className="font-bold p-[2px] rounded-[5px]">git init</code>
+                    <code className="font-bold">
+                        <CopyButton textToCopy="git init"></CopyButton>
+                    </code>
                 </p>,
                 <br />,
                 <p>
                     <b>3. Staging e Commit: </b>
                     Per salvare le modifiche nel repository Git, devi prima aggiungerle all'area di staging e poi fare un commit.
                     <br />
-                    <code className="font-bold p-[2px] rounded-[5px]">git add . / git add nomefile</code>
+                    <code className="font-bold">
+                        <CopyButton textToCopy="git add . / git add nomefile"></CopyButton>
+                    </code>
                 </p>,
                 <br />,
                 <p>
                     <b>3. Staging e Commit: </b>
                     Per salvare le modifiche nel repository Git, devi prima aggiungerle all'area di staging e poi fare un commit.
                     <br />
-                    <code className="font-bold p-[2px] rounded-[5px]">git add . / git add nomefile</code>
+                    <code className="font-bold">
+                        <CopyButton textToCopy="git add . / git add nomefile"></CopyButton>
+                    </code>
                     <br />
-                    <code className="font-bold   p-[2px] rounded-[5px]">git commit / git commit -m "Messaggio descrittivo del commit"</code>
+                    <code className="font-bold">
+                        <CopyButton textToCopy="git commit / git commit -m Messaggio commit"></CopyButton>
+                    </code>
                 </p>,
                 <br />,
                 <p>
@@ -168,7 +176,9 @@ function Exercise() {
                     Per vedere lo stato del tuo repository, usa il comando git status. Questo ti mostrerà quali file sono stati modificati, quali sono
                     in staging e quali non sono tracciati da Git.
                     <br />
-                    <code className="font-bold p-[2px] rounded-[5px]">git status</code>
+                    <code className="font-bold">
+                        <CopyButton textToCopy="git status"></CopyButton>
+                    </code>
                 </p>,
                 <br />,
                 <p>
@@ -176,7 +186,9 @@ function Exercise() {
                     Per vedere la cronologia dei commit del repository, usa il comando git log. Questo ti mostrerà una lista dei commit, con hash,
                     messaggi di commit, autori e date.
                     <br />
-                    <code className="font-bold p-[2px] rounded-[5px]">git log | git log --oneline</code>
+                    <code className="font-bold">
+                        <CopyButton textToCopy="git log | git log --oneline"></CopyButton>
+                    </code>
                 </p>,
                 <br />,
                 <p>
@@ -185,15 +197,21 @@ function Exercise() {
                     <br />
                     -Creare un nuovo branch:
                     <br />
-                    <code className="font-semibold p-[2px] rounded-[5px]">git branch nome-branch</code>
+                    <code className="font-bold">
+                        <CopyButton textToCopy="git branch nome-branch"></CopyButton>
+                    </code>
                     <br />
                     -Passare a un branch esistente:
                     <br />
-                    <code className="font-bold p-[2px] rounded-[5px]">git checkout nome-branch</code>
+                    <code className="font-bold">
+                        <CopyButton textToCopy="git checkout nome-branch"></CopyButton>
+                    </code>
                     <br />
                     Creare e passare a un nuovo branch in un solo comando:
                     <br />
-                    <code className="font-bold p-[2px] rounded-[5px]">git checkout -b nome-branch</code>
+                    <code className="font-bold">
+                        <CopyButton textToCopy="git checkout -b nome-branch"></CopyButton>
+                    </code>
                 </p>,
             ],
         },
