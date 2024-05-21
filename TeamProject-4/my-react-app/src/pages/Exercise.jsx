@@ -11,20 +11,110 @@ function Exercise() {
         {
             title: 'HTML',
             exercises: [
-                <p>
-                    <b>1) Creazione di una pagina HTML base: </b> Crea una semplice pagina HTML con un titolo, un'intestazione, un paragrafo e
-                    un'immagine.
-                </p>,
-                <br />,
-                <p>
-                    <b>2) Aggiunta di link ipertestuali:</b> Estendi la pagina creata nell'esercizio 1 aggiungendo uno o più link ipertestuali che
-                    portino ad altre pagine web.
-                </p>,
-                <br />,
-                <p>
-                    <b>3) Utilizzo di liste:</b> Crea una pagina HTML che contenga almeno una lista ordinata e una lista non ordinata, con diversi
-                    elementi.
-                </p>,
+                <Accordion
+                    key="nested1"
+                    contentClassName="bg-transparent"
+                    title="1) Creazione di una pagina HTML base: </b> Crea una semplice pagina HTML con un titolo, un'intestazione, un paragrafo e
+                un'immagine."
+                    exercises={[
+                        <div>
+                            <p key="1">
+                                <b>Solution: </b>
+                                <pre>
+                                    <code>
+                                        {`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Structure</title>
+</head>
+<body>
+    <h1>Welcome to My Webpage</h1>
+    <p>This is a simple HTML structure example.</p>
+</body>
+</html>`}
+                                    </code>
+                                </pre>
+                            </p>
+                        </div>,
+                    ]}
+                />,
+                <Accordion
+                    key="nested1"
+                    contentClassName="bg-transparent"
+                    title="2) Aggiunta di link ipertestuali: Estendi la pagina creata nell'esercizio 1 aggiungendo uno o più link ipertestuali che
+                    portino ad altre pagine web."
+                    exercises={[
+                        <div>
+                            <p key="1">
+                                <b>Solution: </b>
+                                <pre>
+                                    <code>{`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML with Links</title>
+</head>
+<body>
+    <h1>Welcome to My Webpage</h1>
+    <p>This is a simple HTML structure example.</p>
+    <img src="https://via.placeholder.com/150" alt="Sample Image">
+    
+    <!-- Added hypertext links -->
+    <p>Check out these links:</p>
+    <ul>
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+        <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
+        <li><a href="https://www.example.com" target="_blank">Example.com</a></li>
+    </ul>
+</body>
+</html>`}</code>
+                                </pre>
+                            </p>
+                        </div>,
+                    ]}
+                />,
+                <Accordion
+                    key="nested1"
+                    contentClassName="bg-transparent"
+                    title="3) Utilizzo di liste: Crea una pagina HTML che contenga almeno una lista ordinata e una lista non ordinata, con diversi"
+                    exercises={[
+                        <div>
+                            <p key="1">
+                                <b>Solution: </b>
+                                <pre>
+                                    <code>{`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists</title>
+</head>
+<body>
+    <h1>HTML Lists</h1>
+    
+    <h2>Ordered List (ol):</h2>
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol>
+    
+    <h2>Unordered List (ul):</h2>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ul>
+</body>
+</html>`}</code>
+                                </pre>
+                            </p>
+                        </div>,
+                    ]}
+                />,
                 <br />,
                 <p>
                     <b>4) Tabelle HTML: </b>Crea una tabella HTML che mostri una serie di dati tabellari, come ad esempio una tabella di orario o una
