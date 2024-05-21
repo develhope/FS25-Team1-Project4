@@ -8,11 +8,13 @@ const img = ['ragazza-europea.png', 'ragazza-latina.png', 'ragazzo-asiatico.png'
 
 export default function Home() {
     return (
-        <div>
+        <div className="h-screen relative">
             <BackgroundImage />
-            <HomeText />
             <NavbarDefault />
-            <RandomImgHome img={img} />
+            <div className="w-full flex absolute h-[80%] bottom-0">
+                <HomeText />
+                <RandomImgHome img={img} />
+            </div>
         </div>
     );
 }
