@@ -14,7 +14,7 @@ function Exercise() {
                 <Accordion
                     key="nested1"
                     contentClassName="bg-transparent"
-                    title="1) Creazione di una pagina HTML base: </b> Crea una semplice pagina HTML con un titolo, un'intestazione, un paragrafo e
+                    title="1) Creazione di una pagina HTML base: Crea una semplice pagina HTML con un titolo, un'intestazione, un paragrafo e
                 un'immagine."
                     exercises={[
                         <div>
@@ -41,13 +41,13 @@ function Exercise() {
                     ]}
                 />,
                 <Accordion
-                    key="nested1"
+                    key="nested2"
                     contentClassName="bg-transparent"
                     title="2) Aggiunta di link ipertestuali: Estendi la pagina creata nell'esercizio 1 aggiungendo uno o più link ipertestuali che
                     portino ad altre pagine web."
                     exercises={[
                         <div>
-                            <p key="1">
+                            <p key="2">
                                 <b>Solution: </b>
                                 <pre>
                                     <code>{`<!DOCTYPE html>
@@ -77,12 +77,12 @@ function Exercise() {
                     ]}
                 />,
                 <Accordion
-                    key="nested1"
+                    key="nested3"
                     contentClassName="bg-transparent"
-                    title="3) Utilizzo di liste: Crea una pagina HTML che contenga almeno una lista ordinata e una lista non ordinata, con diversi"
+                    title="3) Utilizzo di liste: Crea una pagina HTML che contenga almeno una lista ordinata e una lista non ordinata, con diversi elementi."
                     exercises={[
                         <div>
-                            <p key="1">
+                            <p key="3">
                                 <b>Solution: </b>
                                 <pre>
                                     <code>{`<!DOCTYPE html>
@@ -115,16 +115,128 @@ function Exercise() {
                         </div>,
                     ]}
                 />,
-                <br />,
-                <p>
-                    <b>4) Tabelle HTML: </b>Crea una tabella HTML che mostri una serie di dati tabellari, come ad esempio una tabella di orario o una
-                    tabella di punteggi.
-                </p>,
-                <br />,
-                <p>
-                    <b>5) Form HTML:</b> Crea un modulo HTML che contenga diversi tipi di elementi di input, come caselle di testo, menu a discesa,
-                    pulsanti di opzione e pulsanti di invio.
-                </p>,
+                <Accordion
+                    key="nested4"
+                    contentClassName="bg-transparent"
+                    title="4) Tabelle HTML: Crea una tabella HTML che mostri una serie di dati tabellari, come ad esempio una tabella di orario o una
+                    tabella di punteggi."
+                    exercises={[
+                        <div>
+                            <p key="4">
+                                <b>Solution: </b>
+                                <pre>
+                                    <code>{`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Example</title>
+</head>
+<body>
+    <h1>HTML Table Example</h1>
+    
+    <h2>Schedule Table:</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9:00 - 10:00</td>
+                <td>Math</td>
+                <td>Science</td>
+                <td>English</td>
+                <td>History</td>
+                <td>PE</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:00</td>
+                <td>English</td>
+                <td>Math</td>
+                <td>Science</td>
+                <td>PE</td>
+                <td>History</td>
+            </tr>
+            <tr>
+                <td>11:00 - 12:00</td>
+                <td>History</td>
+                <td>English</td>
+                <td>Math</td>
+                <td>Science</td>
+                <td>PE</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>`}</code>
+                                </pre>
+                            </p>
+                        </div>,
+                    ]}
+                />,
+                <Accordion
+                    key="nested5"
+                    contentClassName="bg-transparent"
+                    title="5) Form HTML: Crea un modulo HTML che contenga diversi tipi di elementi di input, come caselle di testo, menu a discesa,
+                    pulsanti di opzione e pulsanti di invio."
+                    exercises={[
+                        <div>
+                            <p key="5">
+                                <b>Solution: </b>
+                                <pre>
+                                    <code>{`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Example</title>
+</head>
+<body>
+    <h1>HTML Form Example</h1>
+    
+    <form action="/submit-form" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age"><br><br>
+        
+        <label for="country">Country:</label><br>
+        <select id="country" name="country">
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+            <option value="australia">Australia</option>
+        </select><br><br>
+        
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+        
+        <label for="subscribe">Subscribe to newsletter:</label>
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>`}</code>
+                                </pre>
+                            </p>
+                        </div>,
+                    ]}
+                />,
             ],
         },
         {
