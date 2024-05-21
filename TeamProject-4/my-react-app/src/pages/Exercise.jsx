@@ -202,8 +202,8 @@ function Exercise() {
     return (
         <div>
             <BackgroundImage />
-            <h1 className="absolute top-[4rem] font-semibold left-[37rem] text-6xl text-[#2ea5c7] drop-shadow-lg">Exercise</h1>
-            <div className="absolute bg-gradient-to-r from-teal-300 to-blue-400 rounded-[20px] top-[15rem] left-[5rem] container mx-auto p-4">
+            {/* <h1 className="absolute top-[4rem] font-semibold left-[40rem] text-6xl text-[#2ea5c7] drop-shadow-lg">Exercise</h1> */}
+            <div className="absolute bg-gradient-to-r from-green-400 to-cyan-300 rounded-[20px] top-[15rem] left-[5rem] container mx-auto p-4">
                 {topics.map((topic, index) => (
                     <Accordion key={index} title={topic.title} exercises={topic.exercises} />
                 ))}
