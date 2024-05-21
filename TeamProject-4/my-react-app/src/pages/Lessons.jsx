@@ -1,21 +1,20 @@
 import React from 'react';
-import VerticalCarousel from '../components/VerticalCarousel.jsx';
 import BackgroundImage from '../components/BackgroundImage';
-
-const videoLessons = [
-    { src: '../utils/VideoProva.mp4', title: 'Lesson 1' },
-    // { src: '/path/to/video2.mp4', title: 'Lesson 2' },
-    // { src: '/path/to/video3.mp4', title: 'Lesson 3' },
-];
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const Lessons = () => {
+    const navigate = useNavigate();
+
     return (
         <div>
             <BackgroundImage />
-            <div className="lessons-page">
-                <h1 className="page-title">Lessons</h1>
-                <VerticalCarousel videos={videoLessons} />
-            </div>
+            <button
+                onClick={() => navigate(-1)}
+                className="absolute top-4 left-4 bg-blue-500 text-white p-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300"
+            >
+                <FaArrowLeft />
+            </button>
         </div>
     );
 };
