@@ -10,6 +10,7 @@ import Exercise from './pages/Exercise';
 import Lessons from './pages/Lessons';
 
 function App() {
+    
     return (
         <div>
             <Router>
