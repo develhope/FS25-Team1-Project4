@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import LoginPage from './pages/LoginPage';
 import Exercise from './pages/Exercise';
 import Lessons from './pages/Lessons';
+import Edit from './pages/Edit';
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                         <Route path="/my-react-app/src/pages/Contact.jsx" element={<Contact />} />
                         <Route path="/my-react-app/src/pages/Exercise.jsx" element={<Exercise />} />
                         <Route path="/my-react-app/src/pages/Lessons.jsx" element={<Lessons />} />
+                        <Route path="/my-react-app/src/pages/Edit.jsx" element={<Edit />} />
                     </Routes>
                 </div>
             </Router>
