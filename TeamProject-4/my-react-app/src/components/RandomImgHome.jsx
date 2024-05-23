@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 export function RandomImgHome({ img }) {
-    //bisogna aggiungere immagini 
+    //bisogna aggiungere immagini
 
     const [randomIndex, setRandomIndex] = useState(null);
     const [randomImg, setRandomImg] = useState(null);
@@ -15,8 +15,8 @@ export function RandomImgHome({ img }) {
     }, []);
 
     return (
-        <div className="img-container ">
-            <img src={randomImg} className="absolute top-[8rem] left-[55rem] h-[43rem]" />
+        <div className="h-full">
+            <img src={randomImg} className="object-cover w-full h-full" />
         </div>
     );
 }
