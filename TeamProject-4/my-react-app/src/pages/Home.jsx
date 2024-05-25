@@ -3,6 +3,7 @@ import BackgroundImage from '../components/BackgroundImage';
 import { NavbarDefault } from '../components/NavbarDefault';
 import HomeText from '../components/HomeText';
 import { RandomImgHome } from '../components/RandomImgHome';
+import UserAvatar from '../components/UserAvatar';
 
 const img = ['ragazza-europea.png', 'ragazza-latina.png', 'ragazzo-asiatico.png', 'ragazzo-europeo.png'];
 

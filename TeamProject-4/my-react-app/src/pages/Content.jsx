@@ -5,7 +5,10 @@ import Icona1 from '../assets/Rct.png';
 import Icona2 from '../assets/Exers.png';
 import Icona3 from '../assets/AI.png';
 import Icona4 from '../assets/editIcon.png';
+// import imgAvatarDefault from '../assets/imgAvatarDefault.jpeg';
+
 import { Link } from 'react-router-dom';
+import UserAvatar from '../components/UserAvatar';
 
 export default function Content() {
     return (
@@ -52,6 +55,7 @@ export default function Content() {
                     edit={1}
                 ></Card>
             </Link>
+            <UserAvatar username="Login"></UserAvatar>
         </div>
     );
 }

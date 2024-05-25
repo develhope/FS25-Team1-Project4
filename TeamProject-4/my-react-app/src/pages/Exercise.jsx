@@ -4,7 +4,6 @@ import BackgroundImage from '../components/BackgroundImage';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import CopyButton from '../components/CopyButton';
-import UserAvatar from '../components/UserAvatar';
 
 function Exercise() {
     const navigate = useNavigate();
@@ -495,7 +494,6 @@ function Exercise() {
             >
                 <FaArrowLeft />
             </button>
-            <UserAvatar username="Login"></UserAvatar>
         </div>
     );
 }
