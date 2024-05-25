@@ -8,7 +8,7 @@ export default function AboutAs() {
         <div>
             <BackgroundImage />
             <NavbarDefault />
-            <div className="absolute top-[2rem] m-[130px] text-lg bg-gradient-to-r from-green-400 to-cyan-300 p-[30px] rounded-[20px]">
+            <div className="absolute top-[2rem] m-[130px] text-lg bg-gradient-to-r from-teal-300 to-sky-300 p-[30px] rounded-[20px]">
                 <h1 className="text-3xl flex">
                     Benvenuti in CodeVerse <img src={Logo} alt="logo" className="w-12 h-12" />
                 </h1>
