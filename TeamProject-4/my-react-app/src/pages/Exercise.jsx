@@ -17,26 +17,37 @@ function Exercise() {
                     title="1) Creazione di una pagina HTML base: Crea una semplice pagina HTML con un titolo, un'intestazione, un paragrafo e
                 un'immagine."
                     exercises={[
-                        <div>
-                            <p key="1">
-                                <b>Solution: </b>
-                                <pre>
-                                    <code>
-                                        {`<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Structure</title>
-</head>
-<body>
-    <h1>Welcome to My Webpage</h1>
-    <p>This is a simple HTML structure example.</p>
-</body>
-</html>`}
-                                    </code>
-                                </pre>
-                            </p>
+                        <div class="relative max-w-6xl mx-auto mt-0">
+                            <div class="bg-gray-900 text-white p-4 rounded-md">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-400">Solution:</span>
+                                    <button
+                                        class="code bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md"
+                                        data-clipboard-target="#code"
+                                    >
+                                        Copy
+                                    </button>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <pre id="code" class="text-gray-300">
+                                        <code>
+                                            {`<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple HTML Structure</title>
+    </head>
+    <body>
+        <h1>Welcome to My Webpage</h1>
+        <p>This is a simple HTML structure example.</p>
+        <img src="https://via.placeholder.com/150" alt="Sample Image">
+    </body>
+    </html>`}
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
                         </div>,
                     ]}
                 />,
@@ -46,11 +57,21 @@ function Exercise() {
                     title="2) Aggiunta di link ipertestuali: Estendi la pagina creata nell'esercizio 1 aggiungendo uno o più link ipertestuali che
                     portino ad altre pagine web."
                     exercises={[
-                        <div>
-                            <p key="2">
-                                <b>Solution: </b>
-                                <pre>
-                                    <code>{`<!DOCTYPE html>
+                        <div class="relative max-w-6xl mx-auto mt-0">
+                            <div class="bg-gray-900 text-white p-4 rounded-md">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-400">Solution:</span>
+                                    <button
+                                        class="code bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md"
+                                        data-clipboard-target="#code"
+                                    >
+                                        Copy
+                                    </button>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <pre id="code" class="text-gray-300">
+                                        <code>
+                                            {`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -70,9 +91,11 @@ function Exercise() {
         <li><a href="https://www.example.com" target="_blank">Example.com</a></li>
     </ul>
 </body>
-</html>`}</code>
-                                </pre>
-                            </p>
+</html>`}
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
                         </div>,
                     ]}
                 />,
@@ -81,11 +104,21 @@ function Exercise() {
                     contentClassName="bg-transparent"
                     title="3) Utilizzo di liste: Crea una pagina HTML che contenga almeno una lista ordinata e una lista non ordinata, con diversi elementi."
                     exercises={[
-                        <div>
-                            <p key="3">
-                                <b>Solution: </b>
-                                <pre>
-                                    <code>{`<!DOCTYPE html>
+                        <div class="relative max-w-6xl mx-auto mt-0">
+                            <div class="bg-gray-900 text-white p-4 rounded-md">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-400">Solution:</span>
+                                    <button
+                                        class="code bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md"
+                                        data-clipboard-target="#code"
+                                    >
+                                        Copy
+                                    </button>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <pre id="code" class="text-gray-300">
+                                        <code>
+                                            {`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -109,9 +142,11 @@ function Exercise() {
         <li>Orange</li>
     </ul>
 </body>
-</html>`}</code>
-                                </pre>
-                            </p>
+</html>`}
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
                         </div>,
                     ]}
                 />,
@@ -121,11 +156,21 @@ function Exercise() {
                     title="4) Tabelle HTML: Crea una tabella HTML che mostri una serie di dati tabellari, come ad esempio una tabella di orario o una
                     tabella di punteggi."
                     exercises={[
-                        <div>
-                            <p key="4">
-                                <b>Solution: </b>
-                                <pre>
-                                    <code>{`<!DOCTYPE html>
+                        <div class="relative max-w-6xl mx-auto mt-0">
+                            <div class="bg-gray-900 text-white p-4 rounded-md">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-400">Solution:</span>
+                                    <button
+                                        class="code bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md"
+                                        data-clipboard-target="#code"
+                                    >
+                                        Copy
+                                    </button>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <pre id="code" class="text-gray-300">
+                                        <code>
+                                            {`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -175,9 +220,11 @@ function Exercise() {
         </tbody>
     </table>
 </body>
-</html>`}</code>
-                                </pre>
-                            </p>
+</html>`}
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
                         </div>,
                     ]}
                 />,
@@ -187,11 +234,21 @@ function Exercise() {
                     title="5) Form HTML: Crea un modulo HTML che contenga diversi tipi di elementi di input, come caselle di testo, menu a discesa,
                     pulsanti di opzione e pulsanti di invio."
                     exercises={[
-                        <div>
-                            <p key="5">
-                                <b>Solution: </b>
-                                <pre>
-                                    <code>{`<!DOCTYPE html>
+                        <div class="relative max-w-6xl mx-auto mt-0">
+                            <div class="bg-gray-900 text-white p-4 rounded-md">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-400">Solution:</span>
+                                    <button
+                                        class="code bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md"
+                                        data-clipboard-target="#code"
+                                    >
+                                        Copy
+                                    </button>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <pre id="code" class="text-gray-300">
+                                        <code>
+                                            {`<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -231,9 +288,11 @@ function Exercise() {
         <input type="submit" value="Submit">
     </form>
 </body>
-</html>`}</code>
-                                </pre>
-                            </p>
+</html>`}
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
                         </div>,
                     ]}
                 />,
