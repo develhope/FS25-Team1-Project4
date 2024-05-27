@@ -16,7 +16,7 @@ function Accordion({ title, exercises, contentClassName }) {
                 <h2 className="font-semibold">{title}</h2>
                 <span>{isOpen ? '-' : '+'}</span>
             </div>
-            <div className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
+            <div className={`overflow-hidden transition-max-height duration-300 ease-in-out ${isOpen ? '' : 'max-h-0'}`}>
                 <div className={`px-4 py-2`}>
                     <ul>
                         {exercises.map((exercise, index) => (
