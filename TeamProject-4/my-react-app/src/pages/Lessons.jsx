@@ -40,7 +40,7 @@ const Lessons = () => {
             >
                 <FaArrowLeft />
             </button>
-            <CarouselLesson cards={cards} height="600px" width="100%" margin="0 auto" offset={200} showArrows={false} />
+            <CarouselLesson cards={cards} height="600px" width="100%" margin="0 auto" offset={200} showArrows={true} />
         </div>
     );
 };
