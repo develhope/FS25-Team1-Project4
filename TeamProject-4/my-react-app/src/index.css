@@ -1,68 +1,78 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*:root {
+  background-image: url('./assets/backgroundImage_trasparente.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}*/
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  right: 80%;
+  left: 5%;
+  font-size: 1.5rem;
+
+  .code-verse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    height: 70px;
+  }
+
+  p {
+    font-size: 0.5rem;
+  }
+}
+
+.helloworld-div {
+
+  h1{
+    color: rgb(255, 255, 255);
+    text-shadow: #474747 3px 5px 2px;
+  }
+
+}
+
+.navbar {
+  position: absolute;
+  top: 5%;
+  right: 11%;
+  left: 17%;
+  font-size: 1rem;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+
+.divHeroImage {
+  width: 100%;
+  height: 100%;
+  border-top: 5px solid rgb(0, 0, 0);
+  border-bottom: 5px solid black;
+}
+.heroImage {
+  width: 100%;
+  height: 100%;
+}
+
+.div-accordion-nested{
+  background-color: transparent;
 }
