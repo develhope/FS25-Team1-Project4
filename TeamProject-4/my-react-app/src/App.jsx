@@ -11,6 +11,7 @@ import Lessons from './pages/Lessons';
 import Edit from './pages/Edit';
 
 function App() {
+    
     return (
         <div>
             <Router>
