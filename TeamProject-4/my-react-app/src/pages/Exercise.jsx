@@ -3,10 +3,167 @@ import Accordion from '../components/Accordion';
 import BackgroundImage from '../components/BackgroundImage';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
+import CopyButtonSolution from '../components/CopyButtonSolution';
 import CopyButton from '../components/CopyButton';
 
 function Exercise() {
     const navigate = useNavigate();
+
+    const solutionHtml1 = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple HTML Structure</title>
+    </head>
+    <body>
+        <h1>Welcome to My Webpage</h1>
+        <p>This is a simple HTML structure example.</p>
+        <img src="https://via.placeholder.com/150" alt="Sample Image">
+    </body>
+    </html>`;
+
+    const solutionHtml2 = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple HTML with Links</title>
+    </head>
+    <body>
+        <h1>Welcome to My Webpage</h1>
+        <p>This is a simple HTML structure example.</p>
+        <img src="https://via.placeholder.com/150" alt="Sample Image">
+        
+        <!-- Added hypertext links -->
+        <p>Check out these links:</p>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank">Google</a></li>
+            <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
+            <li><a href="https://www.example.com" target="_blank">Example.com</a></li>
+        </ul>
+    </body>
+    </html>`;
+
+    const solutionHtml3 = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Lists</title>
+    </head>
+    <body>
+        <h1>HTML Lists</h1>
+        
+        <h2>Ordered List (ol):</h2>
+        <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+        
+        <h2>Unordered List (ul):</h2>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Orange</li>
+        </ul>
+    </body>
+    </html>`;
+
+    const solutionHtml4 = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Table Example</title>
+    </head>
+    <body>
+        <h1>HTML Table Example</h1>
+        
+        <h2>Schedule Table:</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 - 10:00</td>
+                    <td>Math</td>
+                    <td>Science</td>
+                    <td>English</td>
+                    <td>History</td>
+                    <td>PE</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td>English</td>
+                    <td>Math</td>
+                    <td>Science</td>
+                    <td>PE</td>
+                    <td>History</td>
+                </tr>
+                <tr>
+                    <td>11:00 - 12:00</td>
+                    <td>History</td>
+                    <td>English</td>
+                    <td>Math</td>
+                    <td>Science</td>
+                    <td>PE</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+    </html>`;
+
+    const solutionHtml5 = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Form Example</title>
+    </head>
+    <body>
+        <h1>HTML Form Example</h1>
+        
+        <form action="/submit-form" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age"><br><br>
+            
+            <label for="country">Country:</label><br>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="australia">Australia</option>
+            </select><br><br>
+            
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+            
+            <label for="subscribe">Subscribe to newsletter:</label>
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes"><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    </html>`;
 
     const topics = [
         {
@@ -22,30 +179,11 @@ function Exercise() {
                             <div class="bg-gray-900 text-white p-4 rounded-md">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-gray-400">Solution:</span>
-                                    <button
-                                        class="code bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md"
-                                        data-clipboard-target="#code"
-                                    >
-                                        Copy
-                                    </button>
+                                    <CopyButtonSolution textToCopy={solutionHtml1} />
                                 </div>
                                 <div class="overflow-x-auto">
                                     <pre id="code" class="text-gray-300">
-                                        <code>
-                                            {`<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Simple HTML Structure</title>
-    </head>
-    <body>
-        <h1>Welcome to My Webpage</h1>
-        <p>This is a simple HTML structure example.</p>
-        <img src="https://via.placeholder.com/150" alt="Sample Image">
-    </body>
-    </html>`}
-                                        </code>
+                                        <code>{solutionHtml1}</code>
                                     </pre>
                                 </div>
                             </div>
@@ -62,38 +200,11 @@ function Exercise() {
                             <div class="bg-gray-900 text-white p-4 rounded-md">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-gray-400">Solution:</span>
-                                    <button
-                                        class="code bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md"
-                                        data-clipboard-target="#code"
-                                    >
-                                        Copy
-                                    </button>
+                                    <CopyButtonSolution textToCopy={solutionHtml2} />
                                 </div>
                                 <div class="overflow-x-auto">
                                     <pre id="code" class="text-gray-300">
-                                        <code>
-                                            {`<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML with Links</title>
-</head>
-<body>
-    <h1>Welcome to My Webpage</h1>
-    <p>This is a simple HTML structure example.</p>
-    <img src="https://via.placeholder.com/150" alt="Sample Image">
-    
-    <!-- Added hypertext links -->
-    <p>Check out these links:</p>
-    <ul>
-        <li><a href="https://www.google.com" target="_blank">Google</a></li>
-        <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
-        <li><a href="https://www.example.com" target="_blank">Example.com</a></li>
-    </ul>
-</body>
-</html>`}
-                                        </code>
+                                        <code>{solutionHtml2}</code>
                                     </pre>
                                 </div>
                             </div>
@@ -109,42 +220,11 @@ function Exercise() {
                             <div class="bg-gray-900 text-white p-4 rounded-md">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-gray-400">Solution:</span>
-                                    <button
-                                        class="code bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md"
-                                        data-clipboard-target="#code"
-                                    >
-                                        Copy
-                                    </button>
+                                    <CopyButtonSolution textToCopy={solutionHtml3} />
                                 </div>
                                 <div class="overflow-x-auto">
                                     <pre id="code" class="text-gray-300">
-                                        <code>
-                                            {`<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Lists</title>
-</head>
-<body>
-    <h1>HTML Lists</h1>
-    
-    <h2>Ordered List (ol):</h2>
-    <ol>
-        <li>First item</li>
-        <li>Second item</li>
-        <li>Third item</li>
-    </ol>
-    
-    <h2>Unordered List (ul):</h2>
-    <ul>
-        <li>Apple</li>
-        <li>Banana</li>
-        <li>Orange</li>
-    </ul>
-</body>
-</html>`}
-                                        </code>
+                                        <code>{solutionHtml3}</code>
                                     </pre>
                                 </div>
                             </div>
@@ -161,68 +241,11 @@ function Exercise() {
                             <div class="bg-gray-900 text-white p-4 rounded-md">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-gray-400">Solution:</span>
-                                    <button
-                                        class="code bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md"
-                                        data-clipboard-target="#code"
-                                    >
-                                        Copy
-                                    </button>
+                                    <CopyButtonSolution textToCopy={solutionHtml4} />
                                 </div>
                                 <div class="overflow-x-auto">
                                     <pre id="code" class="text-gray-300">
-                                        <code>
-                                            {`<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Table Example</title>
-</head>
-<body>
-    <h1>HTML Table Example</h1>
-    
-    <h2>Schedule Table:</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Time</th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>9:00 - 10:00</td>
-                <td>Math</td>
-                <td>Science</td>
-                <td>English</td>
-                <td>History</td>
-                <td>PE</td>
-            </tr>
-            <tr>
-                <td>10:00 - 11:00</td>
-                <td>English</td>
-                <td>Math</td>
-                <td>Science</td>
-                <td>PE</td>
-                <td>History</td>
-            </tr>
-            <tr>
-                <td>11:00 - 12:00</td>
-                <td>History</td>
-                <td>English</td>
-                <td>Math</td>
-                <td>Science</td>
-                <td>PE</td>
-            </tr>
-        </tbody>
-    </table>
-</body>
-</html>`}
-                                        </code>
+                                        <code>{solutionHtml4}</code>
                                     </pre>
                                 </div>
                             </div>
@@ -239,58 +262,11 @@ function Exercise() {
                             <div class="bg-gray-900 text-white p-4 rounded-md">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-gray-400">Solution:</span>
-                                    <button
-                                        class="code bg-gray-800 hover:bg-gray-700 text-gray-300 px-3 py-1 rounded-md"
-                                        data-clipboard-target="#code"
-                                    >
-                                        Copy
-                                    </button>
+                                    <CopyButtonSolution textToCopy={solutionHtml5} />
                                 </div>
                                 <div class="overflow-x-auto">
                                     <pre id="code" class="text-gray-300">
-                                        <code>
-                                            {`<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Form Example</title>
-</head>
-<body>
-    <h1>HTML Form Example</h1>
-    
-    <form action="/submit-form" method="post">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
-        
-        <label for="age">Age:</label><br>
-        <input type="number" id="age" name="age"><br><br>
-        
-        <label for="country">Country:</label><br>
-        <select id="country" name="country">
-            <option value="usa">USA</option>
-            <option value="canada">Canada</option>
-            <option value="uk">UK</option>
-            <option value="australia">Australia</option>
-        </select><br><br>
-        
-        <label>Gender:</label><br>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br><br>
-        
-        <label for="subscribe">Subscribe to newsletter:</label>
-        <input type="checkbox" id="subscribe" name="subscribe" value="yes"><br><br>
-        
-        <input type="submit" value="Submit">
-    </form>
-</body>
-</html>`}
-                                        </code>
+                                        <code>{solutionHtml5}</code>
                                     </pre>
                                 </div>
                             </div>
