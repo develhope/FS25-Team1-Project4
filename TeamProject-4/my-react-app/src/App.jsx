@@ -1,3 +1,4 @@
+// App.js
 import './App.css';
 import LogoPage from './components/LogoPage';
 import Home from './pages/Home';
@@ -9,27 +10,28 @@ import LoginPage from './pages/LoginPage';
 import Exercise from './pages/Exercise';
 import Lessons from './pages/Lessons';
 import Edit from './pages/Edit';
+import { AuthProvider } from './contexts/AuthContext';
+import ProtectedRoute from './contexts/ProtectedRoute';
 
 function App() {
-    
     return (
-        <div>
+        <AuthProvider>
             <Router>
                 <div className="main-content">
                     <LogoPage />
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/content" element={<Content />} />
                         <Route path="/login" element={<LoginPage />} />
-                        <Route path="/my-react-app/src/pages/AboutAs.jsx" element={<AboutAs />} />
-                        <Route path="/my-react-app/src/pages/Contact.jsx" element={<Contact />} />
-                        <Route path="/my-react-app/src/pages/Exercise.jsx" element={<Exercise />} />
-                        <Route path="/my-react-app/src/pages/Lessons.jsx" element={<Lessons />} />
-                        <Route path="/my-react-app/src/pages/Edit.jsx" element={<Edit />} />
+                        <Route path="/content" element={<ProtectedRoute element={Content} />} />
+                        <Route path="/about-as" element={<ProtectedRoute element={AboutAs} />} />
+                        <Route path="/contact" element={<ProtectedRoute element={Contact} />} />
+                        <Route path="/exercise" element={<ProtectedRoute element={Exercise} />} />
+                        <Route path="/lessons" element={<ProtectedRoute element={Lessons} />} />
+                        <Route path="/edit" element={<ProtectedRoute element={Edit} />} />
                     </Routes>
                 </div>
             </Router>
-        </div>
+        </AuthProvider>
     );
 }
 

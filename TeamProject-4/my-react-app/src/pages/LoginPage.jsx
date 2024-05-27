@@ -1,15 +1,17 @@
+// LoginPage.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 function LoginPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const auth = useAuth();
 
     function handleLogin(event) {
-        // credenziali check: nome admin password password
         event.preventDefault();
-        if (username === 'admin' && password === 'password') {
+        if (auth.login(username, password)) {
             navigate('/content');
         } else {
             alert('Credenziali non valide');
