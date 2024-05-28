@@ -23,8 +23,8 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/login" element={<LoginPage />} />
                         <Route path="/content" element={<ProtectedRoute element={Content} />} />
-                        <Route path="/about-as" element={<ProtectedRoute element={AboutAs} />} />
-                        <Route path="/contact" element={<ProtectedRoute element={Contact} />} />
+                        <Route path="/about-us" element={<AboutAs />} />
+                        <Route path="/contact" element={<Contact />} />
                         <Route path="/exercise" element={<ProtectedRoute element={Exercise} />} />
                         <Route path="/lessons" element={<ProtectedRoute element={Lessons} />} />
                         <Route path="/edit" element={<ProtectedRoute element={Edit} />} />
