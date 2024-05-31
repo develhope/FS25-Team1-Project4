@@ -12,6 +12,7 @@ import Lessons from './pages/Lessons';
 import Edit from './pages/Edit';
 import { AuthProvider } from './contexts/AuthContext';
 import ProtectedRoute from './contexts/ProtectedRoute';
+import AvatarSettings from './pages/AvatarSettings';
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                         <Route path="/exercise" element={<ProtectedRoute element={Exercise} />} />
                         <Route path="/lessons" element={<ProtectedRoute element={Lessons} />} />
                         <Route path="/edit" element={<ProtectedRoute element={Edit} />} />
+                        <Route path="/avatar-settings" element={<ProtectedRoute element={AvatarSettings} />} />
                     </Routes>
                 </div>
             </Router>
