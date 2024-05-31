@@ -8,15 +8,15 @@ export default function AboutAs() {
         <div>
             <BackgroundImage />
             <NavbarDefault />
-            <div className="absolute top-[2rem] m-[130px] text-lg bg-gradient-to-r from-teal-300 to-sky-300 p-[30px] rounded-[20px]">
+            <div className="absolute top-[9rem] m-[130px] text-lg bg-white  bg-opacity-45 p-[30px] rounded-[20px]">
                 <h1 className="text-3xl flex">
-                    Benvenuti in CodeVerse <img src={Logo} alt="logo" className="w-12 h-12" />
+                    Benvenuti in Cycodex <img src={Logo} alt="logo" className="w-12 h-12" />
                 </h1>
                 <br />
                 <p>
                     <b>La nostra storia: </b>
-                    CodeVerse è nata dalla passione per l'apprendimento e la tecnologia. Fondata nel 2024, siamo diventati rapidamente una risorsa
-                    leader per gli studenti che desiderano imparare il coding in modo divertente e coinvolgente.
+                    Cycodex è nata dalla passione per l'apprendimento e la tecnologia. Fondata nel 2024, il progetto è in continuo sviluppo e
+                    rappresenta una piattaforma di e-learning finalizzata allo studio delle basi dello sviluppo web.
                 </p>
                 <br />
                 <p>
@@ -26,15 +26,11 @@ export default function AboutAs() {
                 </p>
                 <br />
                 <p>
-                    <b>I nostri valori: </b> Su CodeVerse, ci impegniamo per l'accessibilità, l'innovazione e l'empowerment degli studenti. Vogliamo
+                    <b>I nostri valori: </b> Su CyCodex, ci impegniamo per l'accessibilità, l'innovazione e l'empowerment degli studenti. Vogliamo
                     creare un ambiente inclusivo in cui ogni studente possa avere successo nel mondo della programmazione.
                 </p>
                 <br />
-                <p>
-                    <b>Il nostro team: </b>CodeVerse è composto da un team di esperti nel campo dell'istruzione e della tecnologia. Dai nostri
-                    sviluppatori agli insegnanti, ogni membro del nostro team porta con sé una profonda passione per l'apprendimento e l'innovazione.
-                </p>
-                <br />
+                {/* <br /> */}
                 {/* <p>
                     <b>I nostri successi e riconoscimenti: </b>Siamo orgogliosi di aver aiutato migliaia di studenti in tutta Italia a imparare il
                     coding e a realizzare i loro progetti. Le nostre soluzioni educative hanno dimostrando l'impatto positivo che stiamo avendo nel
