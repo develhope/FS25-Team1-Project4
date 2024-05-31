@@ -1,18 +1,17 @@
-import React, { useState, useContext } from 'react';
+// LoginPage.js
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import UserContext from '../components/UserContext';
+import { useAuth } from '../contexts/AuthContext';
 
 function LoginPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [role, setRole] = useState('user');
-    const { setUser } = useContext(UserContext);
     const navigate = useNavigate();
+    const auth = useAuth();
 
     function handleLogin(event) {
         event.preventDefault();
-        if (username === 'admin' && password === 'password') {
-            setUser({ username, role });
+        if (auth.login(username, password)) {
             navigate('/content');
         } else {
             alert('Credenziali non valide');
@@ -58,19 +57,23 @@ function LoginPage() {
                                 onChange={(event) => setPassword(event.target.value)}
                             />
                         </div>
-                        <div>
-                            <label htmlFor="role" className="sr-only">
-                                Role
+                    </div>
+                    <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                            <input
+                                id="remember_me"
+                                name="remember_me"
+                                type="checkbox"
+                                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                            />
+                            <label htmlFor="remember_me" className="ml-2 block text-sm text-gray-900">
+                                Ricordami
                             </label>
-                            <select
-                                id="role"
-                                name="role"
-                                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
-                                onChange={(event) => setRole(event.target.value)}
-                            >
-                                <option value="user">User</option>
-                                <option value="admin">Admin</option>
-                            </select>
+                        </div>
+                        <div className="text-sm">
+                            <a href="#" className="font-medium text-blue-600 hover:text-blue-500">
+                                Password dimenticata?
+                            </a>
                         </div>
                     </div>
                     <div>
