@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function Accordion({ title, exercises, contentClassName }) {
-    const [isOpen, setIsOpen] = useState(false);
+function Accordion({ title, exercises, contentClassName, defaultOpen = false }) {
+    const [isOpen, setIsOpen] = useState(defaultOpen);
+
+    useEffect(() => {
+        setIsOpen(defaultOpen);
+    }, [defaultOpen]);
 
     const toggleAccordion = () => {
         setIsOpen(!isOpen);
