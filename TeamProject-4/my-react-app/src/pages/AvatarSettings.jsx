@@ -127,12 +127,10 @@ function AvatarSettings() {
                     </div>
                 </div>
             </div>
-            <button
-                onClick={() => navigate(-1)}
-                className="absolute top-4 left-4 bg-blue-500 text-white p-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300"
-            >
-                <FaArrowLeft />
-            </button>{' '}
+            <button className="absolute top-0 left-0 flex items-center mt-4 ml-4 text-blue-500 hover:text-blue-700" onClick={() => navigate(-1)}>
+                <FaArrowLeft className="mr-2" />
+                Back
+            </button>
         </div>
     );
 }

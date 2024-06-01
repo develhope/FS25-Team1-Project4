@@ -189,7 +189,7 @@ function Exercise() {
                             </div>
                         </div>,
                     ]}
-                    defaultOpen={true} // Apre il primo accordion annidato di default
+                    defaultOpen={true}
                 />,
                 <Accordion
                     key="nested2"
@@ -473,7 +473,7 @@ function Exercise() {
                                 title={topic.title}
                                 exercises={topic.exercises}
                                 contentClassName="bg-gray-100"
-                                defaultOpen={index === 0} // Apre il primo accordion per default
+                                defaultOpen={index === 0}
                             />
                         ))}
                     </div>
