@@ -11,7 +11,7 @@ function LessonsMenuCard({ svg, title, description, link }) {
                         <span className="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
                             {svg}
                         </span>
-                        <h1 className="mb-6 mt-6 font-extrabold leading-none tracking-tight text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl dark:text-white">
+                        <h1 className="mb-6 mt-6 font-extrabold leading-none tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white">
                             {title}
                         </h1>
                         <div className="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
