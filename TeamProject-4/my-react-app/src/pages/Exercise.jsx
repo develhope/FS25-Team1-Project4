@@ -466,7 +466,9 @@ function Exercise() {
                 </button>
                 <div className="pt-12 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-3xl mx-auto">
-                        <h1 className="text-3xl font-bold leading-tight text-gray-900">Esercizi</h1>
+                        <h1 className=" text-center mb-6 mt-6 font-extralight leading-none tracking-tight text-white bg-cyan-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                            Esercizi semplici
+                        </h1>
                         {topics.map((topic, index) => (
                             <Accordion
                                 key={index}
