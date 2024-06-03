@@ -8,7 +8,7 @@ export default function AboutAs() {
         <div>
             <BackgroundImage />
             <NavbarDefault />
-            <div className="absolute top-[9rem] m-[130px] text-lg bg-white  bg-opacity-45 p-[30px] rounded-[20px]">
+            <div className="absolute top-[9rem] m-[130px] text-lg bg-white  bg-opacity-45 p-[30px] rounded-[20px] animate-slideInLeft">
                 <h1 className="text-3xl flex">
                     Benvenuti in Cycodex <img src={Logo} alt="logo" className="w-12 h-12" />
                 </h1>

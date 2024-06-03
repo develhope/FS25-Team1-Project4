@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function LogoPage() {
     return (
-        <div className="logo-page m-12">
+        <div className="logo-page m-12 animate-slideInLeft">
             <Link to="/">
                 <img
                     src={logopng}
