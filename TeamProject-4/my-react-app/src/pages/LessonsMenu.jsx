@@ -14,7 +14,7 @@ const Lessons = () => {
                 <FaArrowLeft className="mr-2" />
                 Back
             </button>
-            <div className="flex flex-wrap justify-center items-center gap-6 mt-52 mx-4 absolute">
+            <div className="flex flex-wrap justify-center items-center gap-6 mt-56 mx-4 absolute">
                 <LessonsMenuCard
                     title={'HTML'}
                     svg={
@@ -50,11 +50,11 @@ const Lessons = () => {
                         </svg>
                     }
                     description={
-                        "CSS è il linguaggio che rende belle le pagine web, permettendo di controllare colori, font, layout e design, trasformando l'HTML in arte visiva."
+                        "CSS è il linguaggio che cura il design delle pagine web, permettendo di controllare colori, font, layout e animazioni, trasformando l'HTML in arte visiva."
                     }
                 />
                 <LessonsMenuCard
-                    title={'JS'}
+                    title={'Javascript'}
                     svg={
                         <svg
                             class="w-6 h-6 text-gray-800 dark:text-white"
