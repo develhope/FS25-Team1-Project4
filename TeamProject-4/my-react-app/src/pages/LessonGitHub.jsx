@@ -5,29 +5,29 @@ import { FaArrowLeft } from 'react-icons/fa';
 import { CardLesson } from '../components/CardLesson';
 import { CarouselLesson } from '../components/CarouselLesson';
 
-const Lessons = () => {
+const LessonsGitHub = () => {
     const navigate = useNavigate();
 
     let cards = [
         {
             key: 1,
-            content: <CardLesson video="https://www.youtube.com/embed/PpBdz1ehRFE?si=2QIF5_mKnnXsq5zQ" />,
+            content: <CardLesson video="https://www.youtube.com/embed/NVpwCzeFPD8?si=k487ePBg9fDj5wtn"/>,
         },
         {
             key: 2,
-            content: <CardLesson video="https://www.youtube.com/embed/JRJNvxoh844?si=PA8kKEWnozDb87y_" />,
+            content: <CardLesson video="https://www.youtube.com/embed/V5d49WePfqo?si=gaqVHdZXNJaboVNE" />,
         },
         {
             key: 3,
-            content: <CardLesson video="https://www.youtube.com/embed/TxcJ2drr554?si=qfuKyFDAmrlvYCCf" />,
+            content: <CardLesson video="https://www.youtube.com/embed/BVfAOwISn3w?si=HrQh8LyjCqq1ky6D" />,
         },
         {
             key: 4,
-            content: <CardLesson video="https://www.youtube.com/embed/YwyjQKpW2GM?si=poCNE0w52FqjUnDi" />,
+            content: <CardLesson video="https://www.youtube.com/embed/IXSNTvJmyp8?si=hP1U8MfN7KGB8djD" />,
         },
         {
             key: 5,
-            content: <CardLesson video="https://www.youtube.com/embed/y8EfGG-5s3I?si=Zf820udNWk-EBzqk" />,
+            content: <CardLesson video="https://www.youtube.com/embed/LF3-dgRxS_w?si=c1VD-WvAGRTc8qd7" />,
         },
     ];
 
@@ -43,4 +43,4 @@ const Lessons = () => {
     );
 };
 
-export default Lessons;
+export default LessonsGitHub;
