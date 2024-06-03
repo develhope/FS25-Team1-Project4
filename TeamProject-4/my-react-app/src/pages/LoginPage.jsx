@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import logoLogin from '../assets/LogoDefinitivo-removebg-preview.png';
 
 function LoginPage() {
     const [username, setUsername] = useState('');
@@ -22,7 +23,7 @@ function LoginPage() {
         <div className="flex items-center justify-center h-screen bg-gradient-to-r from-green-400 to-cyan-300">
             <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-lg">
                 <div className="flex flex-col items-center">
-                    <img src="https://www.ilnostrologo.com?????" alt="Login Icon" className="w-24 h-24 mb-4" />
+                    <img src={logoLogin} alt="Login Icon" className="w-24 h-24 mb-4" />
                     <h1 className="text-3xl font-bold text-blue-700">Login</h1>
                 </div>
                 <form className="mt-8 space-y-6" onSubmit={handleLogin}>

@@ -175,20 +175,21 @@ function Exercise() {
                     title="1) Creazione di una pagina HTML base: Crea una semplice pagina HTML con un titolo, un'intestazione, un paragrafo e
                 un'immagine."
                     exercises={[
-                        <div class="relative max-w-6xl mx-auto mt-0">
-                            <div class="bg-gray-900 text-white p-4 rounded-md">
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-gray-400">Solution:</span>
+                        <div className="relative max-w-6xl mx-auto mt-0">
+                            <div className="bg-gray-900 text-white p-4 rounded-md">
+                                <div className="flex justify-between items-center mb-2">
+                                    <span className="text-gray-400">Solution:</span>
                                     <CopyButtonSolution textToCopy={solutionHtml1} />
                                 </div>
-                                <div class="overflow-x-auto">
-                                    <pre id="code" class="text-gray-300">
+                                <div className="overflow-x-auto">
+                                    <pre id="code" className="text-gray-300">
                                         <code>{solutionHtml1}</code>
                                     </pre>
                                 </div>
                             </div>
                         </div>,
                     ]}
+                    defaultOpen={true}
                 />,
                 <Accordion
                     key="nested2"
@@ -196,14 +197,14 @@ function Exercise() {
                     title="2) Aggiunta di link ipertestuali: Estendi la pagina creata nell'esercizio 1 aggiungendo uno o più link ipertestuali che
                     portino ad altre pagine web."
                     exercises={[
-                        <div class="relative max-w-6xl mx-auto mt-0">
-                            <div class="bg-gray-900 text-white p-4 rounded-md">
-                                <div class="flex justify-between items-center mb-2">
-                                    <span class="text-gray-400">Solution:</span>
+                        <div className="relative max-w-6xl mx-auto mt-0">
+                            <div className="bg-gray-900 text-white p-4 rounded-md">
+                                <div className="flex justify-between items-center mb-2">
+                                    <span className="text-gray-400">Solution:</span>
                                     <CopyButtonSolution textToCopy={solutionHtml2} />
                                 </div>
-                                <div class="overflow-x-auto">
-                                    <pre id="code" class="text-gray-300">
+                                <div className="overflow-x-auto">
+                                    <pre id="code" className="text-gray-300">
                                         <code>{solutionHtml2}</code>
                                     </pre>
                                 </div>
@@ -458,18 +459,28 @@ function Exercise() {
     return (
         <div>
             <BackgroundImage />
-            {/* <h1 className="absolute top-[4rem] font-semibold left-[40rem] text-6xl text-[#2ea5c7] drop-shadow-lg">Exercise</h1> */}
-            <div className="absolute bg-gradient-to-b from-teal-300 to-sky-300 rounded-[20px] top-[15rem] left-[5rem] container mx-auto p-4">
-                {topics.map((topic, index) => (
-                    <Accordion key={index} title={topic.title} exercises={topic.exercises} />
-                ))}
+            <div className="relative max-w-7xl mx-auto mt-4">
+                <button className="absolute top-0 left-0 flex items-center mt-4 ml-4 text-blue-500 hover:text-blue-700" onClick={() => navigate(-1)}>
+                    <FaArrowLeft className="mr-2" />
+                    Back
+                </button>
+                <div className="pt-12 px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-3xl mx-auto">
+                        <h1 className=" text-center mb-6 mt-6 font-extralight leading-none tracking-tight text-white bg-cyan-400 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                            Esercizi semplici
+                        </h1>
+                        {topics.map((topic, index) => (
+                            <Accordion
+                                key={index}
+                                title={topic.title}
+                                exercises={topic.exercises}
+                                contentClassName="bg-gray-100"
+                                defaultOpen={index === 0}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
-            <button
-                onClick={() => navigate(-1)}
-                className="absolute top-4 left-4 bg-blue-500 text-white p-2 rounded-full shadow-md hover:bg-blue-700 transition duration-300"
-            >
-                <FaArrowLeft />
-            </button>
         </div>
     );
 }

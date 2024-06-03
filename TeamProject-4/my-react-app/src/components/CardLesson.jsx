@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { ButtonCardLesson } from './ButtonCardLesson';
+import { Link } from 'react-router-dom';
 
-export function CardLesson({ video }) {
+export function CardLesson({ video, title, text, link }) {
     const [show, setShown] = useState(false);
 
     const props3 = useSpring({
@@ -22,20 +23,18 @@ export function CardLesson({ video }) {
                 height="315"
                 src={video}
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
             ></iframe>
             <div className='flex flex-col items-center m-4'>
-                <h2 className='text-2xl font-semibold py-2'>Title</h2>
+                <h2 className='text-2xl font-semibold py-2'>{title}</h2>
                 <p className='text-justify'>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                    erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                    erat volutpat.
+                    {text}
                 </p>
                 <div className="flex">
-                    <ButtonCardLesson text="Vai agli esercizi" />
+                    <Link to='/exercise'><ButtonCardLesson text="Vai agli esercizi" /></Link>
                 </div>
             </div>
         </animated.div>
