@@ -13,6 +13,7 @@ import Edit from './pages/Edit';
 import { AuthProvider } from './contexts/AuthContext';
 import ProtectedRoute from './contexts/ProtectedRoute';
 import AvatarSettings from './pages/AvatarSettings';
+import LessonsMenu from './pages/LessonsMenu';
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                         <Route path="/lessons" element={<ProtectedRoute element={Lessons} />} />
                         <Route path="/edit" element={<ProtectedRoute element={Edit} />} />
                         <Route path="/avatar-settings" element={<ProtectedRoute element={AvatarSettings} />} />
+                        <Route path="/menu-lessons" element={<ProtectedRoute element={LessonsMenu} />} />
                     </Routes>
                 </div>
             </Router>

@@ -12,7 +12,7 @@ function Accordion({ title, exercises, contentClassName, defaultOpen = false }) 
     };
 
     return (
-        <div className="rounded mb-4">
+        <div className="rounded mb-4 bg-gray-200">
             <div
                 className={`flex items-center justify-between px-4 py-3 cursor-pointer bg-gray-100 rounded-[10px] drop-shadow-lg ${contentClassName}`}
                 onClick={toggleAccordion}
