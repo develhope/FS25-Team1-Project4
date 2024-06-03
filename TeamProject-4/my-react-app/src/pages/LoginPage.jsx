@@ -21,7 +21,7 @@ function LoginPage() {
 
     return (
         <div className="flex items-center justify-center h-screen bg-gradient-to-r from-green-400 to-cyan-300">
-            <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-lg">
+            <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-lg animate-slideInLeft">
                 <div className="flex flex-col items-center">
                     <img src={logoLogin} alt="Login Icon" className="w-24 h-24 mb-4" />
                     <h1 className="text-3xl font-bold text-blue-700">Login</h1>

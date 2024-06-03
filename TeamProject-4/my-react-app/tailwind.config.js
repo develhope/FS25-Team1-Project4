@@ -10,7 +10,7 @@ export default {
                 },
             },
             animation: {
-                slideInLeft: 'slideInLeft 1s ease-out',
+                slideInLeft: 'slideInLeft 0.7s ease-out',
             },
             scale: {
                 200: '2', // Aumenta del 200%
