@@ -30,7 +30,7 @@ export function CardLesson({ video, title, text, link }) {
             ></iframe>
             <div className='flex flex-col items-center m-4'>
                 <h2 className='text-2xl font-semibold py-2'>{title}</h2>
-                <p className='text-justify'>
+                <p className='text-justify text-base'>
                     {text}
                 </p>
                 <div className="flex">
