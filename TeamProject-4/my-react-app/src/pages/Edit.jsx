@@ -3,7 +3,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import BackgroundImage from '../components/BackgroundImage';
-import EditForm from '../components/EditForm';
 import { SidebarEdit } from '../components/SidebarEdit';
 
 const Edit = () => {

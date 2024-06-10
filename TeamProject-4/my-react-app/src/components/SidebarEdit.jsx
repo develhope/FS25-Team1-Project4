@@ -1,7 +1,9 @@
 import { Sidebar } from 'flowbite-react';
-import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards } from 'react-icons/hi';
+import { HiBriefcase, HiInbox, HiUserGroup, } from 'react-icons/hi';
 import { useState } from 'react';
 import EditForm from '../components/EditForm';
+import UserTable from './UserTable';
+
 
 export function SidebarEdit() {
     // Stato per gestire il componente attivo
@@ -12,17 +14,17 @@ export function SidebarEdit() {
         setActiveComponent(component);
     };
     return (
-        <div>
+        <>
             <Sidebar aria-label="Default sidebar example" className="fixed left-12 top-[5.5rem] translate-y-[4rem] h-[11rem] mt-10">
                 <Sidebar.Items>
                     <Sidebar.ItemGroup>
-                        <Sidebar.Item href="#" icon={HiChartPie} onClick={() => handleItemClick('editForm')}>
+                        <Sidebar.Item href="#" icon={HiBriefcase} onClick={() => handleItemClick('editForm')}>
                             Gestione Contenuti
                         </Sidebar.Item>
-                        <Sidebar.Item href="#" icon={HiViewBoards} label="Pro" labelColor="dark" onClick={() => handleItemClick('gestioneUtenti')}>
+                        <Sidebar.Item href="#" icon={HiUserGroup} onClick={() => handleItemClick('gestioneUtenti')}>
                             Gestione Utenti
                         </Sidebar.Item>
-                        <Sidebar.Item href="#" icon={HiInbox} label="3" onClick={() => handleItemClick('placeholder')}>
+                        <Sidebar.Item href="#" icon={HiInbox} onClick={() => handleItemClick('placeholder')}>
                             Placeholder
                         </Sidebar.Item>
                     </Sidebar.ItemGroup>
@@ -30,9 +32,9 @@ export function SidebarEdit() {
             </Sidebar>
             <div className="ml-72 p-4">
                 {activeComponent === 'editForm' && <EditForm />}
-                {activeComponent === 'gestioneUtenti' && <div>Gestione Utenti</div>}
+                {activeComponent === 'gestioneUtenti' && <UserTable />}
                 {activeComponent === 'placeholder' && <div>Placeholder</div>}
             </div>
-        </div>
+        </>
     );
 }
