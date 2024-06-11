@@ -56,7 +56,7 @@ export default function UserAvatar({ username = 'login', email = 'email@example.
             <div
                 id="user-avatar"
                 ref={avatarRef}
-                className={`fixed top-4 right-4 flex items-center gap-3 z-20 ${isMenuOpen ? 'hidden' : 'block'}`}
+                className={`fixed cursor-pointer top-4 right-4 flex items-center gap-3 z-20 ${isMenuOpen ? 'hidden' : 'block'}`}
                 onClick={toggleMenu}
                 tabIndex="0"
             >
