@@ -51,21 +51,6 @@ function AvatarSettings() {
                                         Password
                                     </a>
                                 </li>
-                                <li className="mb-4">
-                                    <a href="#notifications" className="text-gray-600">
-                                        Notifications
-                                    </a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#billing" className="text-gray-600">
-                                        Billing
-                                    </a>
-                                </li>
-                                <li className="mb-4">
-                                    <a href="#integrations" className="text-gray-600">
-                                        Integrations
-                                    </a>
-                                </li>
                             </ul>
                         </nav>
                     </div>
