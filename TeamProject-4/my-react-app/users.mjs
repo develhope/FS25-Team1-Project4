@@ -1,4 +1,4 @@
-export const users = [
+export let users = [
     {
       id: 1,
       name: 'John Doe',
@@ -15,7 +15,7 @@ export const users = [
       id: 3,
       name: 'Admin User',
       email: 'admin@example.com',
-      role: 'amministratore'
+      role: 'admin'
     },
     {
       id: 4,
