@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { users as usersData } from './users.mjs';
+import cors from 'cors'
 
 dotenv.config();
 
