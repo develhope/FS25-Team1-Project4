@@ -1,4 +1,4 @@
-export let users = [
+const users = [
     {
       id: 1,
       name: 'John Doe',
@@ -30,3 +30,5 @@ export let users = [
       role: 'student'
     }
   ];
+
+export {users}
