@@ -6,7 +6,10 @@ function UserTable() {
 
     async function fetchUsers() {
         try {
-            const response = await fetch('http://localhost:3000/users');
+            const response = await fetch('http://localhost:3001/users');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const data = await response.json();
             console.log(data);
 
@@ -31,8 +34,8 @@ function UserTable() {
         setUsers(updatedUsers);
     };
 
-    /* const handleDeleteUser = (userId) => {
-        fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {
+    const handleDeleteUser = (userId) => {
+        fetch(`http://localhost:3001/users/${userId}`, {
             method: 'DELETE',
         })
             .then((response) => response.json())
@@ -42,16 +45,16 @@ function UserTable() {
             .catch((error) => {
                 console.error(error);
             });
-    }; */
+    }; 
 
     return (
         <>
             <table className="relative overflow-x-auto bg-white rounded-md shadow-md w-full px-4 py-2 top-10 border-b border-gray-400">
                 <thead>
                     <tr className="bg-teal-200">
-                        <th className="border-b border-gray-400 bg-blue-gray-50 p-4">Name</th>
+                        <th className="border-b border-gray-400 bg-blue-gray-50 p-4">Nome e cognome</th>
                         <th className="border-b border-gray-400 bg-blue-gray-50 p-4">Email</th>
-                        <th className="border-b border-gray-400 bg-blue-gray-50 p-4">Role</th>
+                        <th className="border-b border-gray-400 bg-blue-gray-50 p-4">Ruolo</th>
                         <th className="border-b border-gray-400 bg-blue-gray-50 p-4">Actions</th>
                     </tr>
                 </thead>
@@ -89,6 +92,7 @@ function UserTable() {
                     )}
                 </tbody>
             </table>
+            <button>Crea nuovo utente</button>
         </>
     );
 }
