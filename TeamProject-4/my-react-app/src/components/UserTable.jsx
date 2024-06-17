@@ -68,7 +68,7 @@ function UserTable() {
                             <tr key={user.id} className="bg-opacity-70 even:bg-teal-100 odd:bg-white">
                                 <td className="p-4">{user.name}</td>
                                 <td className="p-4">{user.email}</td>
-                                <td className="p-4">{user.username}</td>
+                                <td className="p-4">{user.role}</td>
                                 <td className="p-4 ">
                                     <span className="mr-2">
                                         <button
