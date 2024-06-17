@@ -1,5 +1,5 @@
 import React from 'react';
-import logopng from '../assets/LogoDefinitivo-removebg-preview.png';
+import logopng from '../assets/LogoDefinitivo-removebg-preview3.png';
 import { Link } from 'react-router-dom';
 
 export default function LogoPage() {
