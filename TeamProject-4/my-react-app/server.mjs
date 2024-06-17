@@ -56,10 +56,10 @@ app.get('/users/:id', async (req, res) => {
     }
 });
 
-app.post('/users', (req, res) => {
+app.post('/users', async (req, res) => {
     try {
         const { name, email, role } = req.body;
-        db.none(`INSERT INTO users (name, email, role) VALUES ($1, $2, $3)`, [name, email, role]);
+        await db.none(`INSERT INTO users (name, email, role) VALUES ($1, $2, $3)`, [name, email, role]);
 
         res.status(201).json({ msg: 'New user created' });
     } catch (error) {
@@ -68,7 +68,7 @@ app.post('/users', (req, res) => {
     }
 });
 
-app.put('/users/:id', (req, res) => {
+app.put('/users/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const { role } = req.body;
@@ -81,10 +81,10 @@ app.put('/users/:id', (req, res) => {
     }
 });
 
-app.delete('/users/:id', (req, res) => {
+app.delete('/users/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        db.none(`DELETE FROM users WHERE id=$1`, id);
+        await db.none(`DELETE FROM users WHERE id=$1`, id);
 
         res.status(200).json({ msg: 'user deleted' });
     } catch (error) {
