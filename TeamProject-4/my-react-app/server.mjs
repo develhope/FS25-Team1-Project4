@@ -12,7 +12,7 @@ app.use(cors());
 
 app.use(express.json());
 
-const db = pgPromise()('postgres://postgres:postgres@localhost:5432/postgres');
+const db = pgPromise()('postgresql://users_owner:IZwrn1bTBU3K@ep-shrill-lake-a2h9f28b.eu-central-1.aws.neon.tech/users?sslmode=require');
 
 const setupDb = async () => {
     await db.none(` DROP TABLE IF EXISTS users`);
