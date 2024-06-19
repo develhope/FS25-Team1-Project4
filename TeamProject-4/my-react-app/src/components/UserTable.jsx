@@ -25,26 +25,41 @@ function UserTable() {
     }, []);
 
     const handleRoleChange = (userId, newRole) => {
-        const updatedUsers = users.map((user) => {
-            if (user.id === userId) {
-                user.role = newRole;
-            }
-            return user;
-        });
-        setUsers(updatedUsers);
+        if (window.confirm('Sei sicuro di voler cambiare il ruolo?')) {
+            const updatedUsers = users.map((user) => {
+                if (user.id === userId) {
+                    user.role = newRole;
+                }
+                return user;
+            });
+            setUsers(updatedUsers);
+        } else {
+            // Nessuna azione se l'utente annulla la conferma
+            return;
+        }
     };
 
     const handleDeleteUser = (userId) => {
-        fetch(`http://localhost:3001/users/${userId}`, {
-            method: 'DELETE',
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                setUsers(users.filter((user) => user.id !== userId));
+        if (window.confirm('Sei sicuro di voler eliminare questo utente?')) {
+            fetch(`http://localhost:3001/users/${userId}`, {
+                method: 'DELETE',
             })
-            .catch((error) => {
-                console.error(error);
-            });
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error("Errore durante l'eliminazione dell'utente");
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    setUsers(users.filter((user) => user.id !== userId));
+                })
+                .catch((error) => {
+                    console.error('Errore:', error);
+                });
+        } else {
+            // Nessuna azione se l'utente annulla la conferma
+            return;
+        }
     };
 
     return (
