@@ -16,23 +16,24 @@ const db = pgPromise()('postgresql://users_owner:IZwrn1bTBU3K@ep-shrill-lake-a2h
 
 const setupDb = async () => {
     await db.none(` DROP TABLE IF EXISTS users`);
-    await db.none(` 
+    await db.none(`
             CREATE TABLE users (
             id SERIAL NOT NULL PRIMARY KEY,
             name TEXT NOT NULL,
             email TEXT NOT NULL,
-            role TEXT NOT NULL
+            role TEXT NOT NULL,
+            vote REAL DEFAULT NULL
         )
         `);
 
-    await db.none(`INSERT INTO users (name, email, role) VALUES ('John Doe', 'john.doe@example.com', 'admin')`);
-    await db.none(`INSERT INTO users (name, email, role) VALUES ('Jane Doe', 'jane.doe@example.com', 'student')`);
-    await db.none(`INSERT INTO users (name, email, role) VALUES ('Mario Rossi','mario.rossi@example.com', 'student')`);
-    await db.none(`INSERT INTO users (name, email, role) VALUES ('Tizio Caio', 'tizio.caio@example.com', 'student')`);
-    await db.none(`INSERT INTO users (name, email, role) VALUES ('Luigi Bianchi', 'luigi.bianchi@example.com', 'student')`);
+    // await db.none(`INSERT INTO users (name, email, role, vote) VALUES ('John Doe', 'john.doe@example.com', 'admin', )`);
+    // await db.none(`INSERT INTO users (name, email, role, vote) VALUES ('Jane Doe', 'jane.doe@example.com', 'student', '4')`);
+    // await db.none(`INSERT INTO users (name, email, role, vote) VALUES ('Mario Rossi','mario.rossi@example.com', 'student')`);
+    // await db.none(`INSERT INTO users (name, email, role, vote) VALUES ('Tizio Caio', 'tizio.caio@example.com', 'student')`);
+    // await db.none(`INSERT INTO users (name, email, role, vote) VALUES ('Luigi Bianchi', 'luigi.bianchi@example.com', 'student')`);
 };
 
-setupDb();
+// setupDb();
 
 app.get('/users', async (req, res) => {
     try {

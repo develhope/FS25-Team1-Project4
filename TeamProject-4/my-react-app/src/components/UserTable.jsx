@@ -45,7 +45,7 @@ function UserTable() {
             .catch((error) => {
                 console.error(error);
             });
-    }; 
+    };
 
     return (
         <>
@@ -55,6 +55,7 @@ function UserTable() {
                         <th className="border-b border-gray-400 bg-blue-gray-50 p-4">Nome e cognome</th>
                         <th className="border-b border-gray-400 bg-blue-gray-50 p-4">Email</th>
                         <th className="border-b border-gray-400 bg-blue-gray-50 p-4">Ruolo</th>
+                        <th className="border-b border-gray-400 bg-blue-gray-50 p-4">Vote</th>
                         <th className="border-b border-gray-400 bg-blue-gray-50 p-4">Actions</th>
                     </tr>
                 </thead>
@@ -69,6 +70,7 @@ function UserTable() {
                                 <td className="p-4">{user.name}</td>
                                 <td className="p-4">{user.email}</td>
                                 <td className="p-4">{user.role}</td>
+                                <td className="p-4">{user.vote}</td>
                                 <td className="p-4 ">
                                     <span className="mr-2">
                                         <button
