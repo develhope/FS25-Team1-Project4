@@ -4,7 +4,7 @@ function ContentForm() {
     const [formType, setFormType] = useState('Lezione');
     const [title, setTitle] = useState('');
     const [topic, setTopic] = useState('HTML');
-    const [videoUrl, setVideoUrl] = useState('');
+    const [video, setVideo] = useState('');
     const [description, setDescription] = useState('');
     const [file, setFile] = useState(null);
     const [exerciseCommand, setExerciseCommand] = useState('');
@@ -16,7 +16,7 @@ function ContentForm() {
     };
 
     const resetFormFields = () => {
-        setVideoUrl('');
+        setVideo('');
         setDescription('');
         setFile(null);
         setExerciseCommand('');
@@ -25,34 +25,41 @@ function ContentForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        // logica di invio del form qui
-        console.log({
-            title,
-            topic,
-            formType,
-            videoUrl,
-            description,
-            file,
-            exerciseCommand,
-            exerciseSolution,
-        });
+        createNewUser();
     };
+
+    const createNewUser = () => {
+        // Make a POST request to the API
+        fetch('http://localhost:3001/lessons', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ title, video, topic, description }),
+        })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((error) => {
+                console.error(error);
+                alert('Errore durante la creazione del contenuto');
+            });
+    };
+
+    /* const updateExistingUser = () => {
+        fetch(`http://localhost:3001/users/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ title, video, topic, description }),
+        })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((error) => {
+                console.error(error);
+                alert('Errore durante l\'aggiornamento del contenuto');
+              });
+    }; */
 
     return (
         <div className="min-h-screen flex items-center justify-center">
@@ -110,8 +117,8 @@ function ContentForm() {
                             <label className="block text-lg font-semibold text-gray-700">URL del video YouTube</label>
                             <input
                                 type="url"
-                                value={videoUrl}
-                                onChange={(e) => setVideoUrl(e.target.value)}
+                                value={video}
+                                onChange={(e) => setVideo(e.target.value)}
                                 className="w-full mt-2 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                             />
                         </div>
