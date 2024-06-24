@@ -94,6 +94,80 @@ app.delete('/users/:id', async (req, res) => {
     }
 });
 
+
+//api lessons
+app.get('/lessons', async (req, res) => {
+    try {
+        const users = await db.many(`SELECT * FROM lessons`);
+        res.status(200).json(users);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ msg: 'Bad request' });
+    }
+});
+
+app.get('/lessons/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const user = await db.one(`SELECT * FROM lessons WHERE id=$1`, Number(id));
+
+        res.status(200).json(user);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ msg: 'Bad request' });
+    }
+});
+
+app.post('/lessons', async (req, res) => {
+    try {
+        const { title, video, topic, description } = req.body;
+        await db.none(`INSERT INTO lessons (title, video, topic, description) VALUES ($1, $2, $3, $4)`, [title, video, topic, description]);
+
+        res.status(201).json({ msg: 'New lesson created' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ msg: 'Bad request' });
+    }
+});
+
+app.put('/lessons/:id', async (req, res) => {
+    try {
+      const { id } = req.params;
+      const updateFields = {};
+  
+      if (req.body.title) updateFields.title = req.body.title;
+      if (req.body.video) updateFields.video = req.body.video;
+      if (req.body.topic) updateFields.argument = req.body.topic;
+      if (req.body.description) updateFields.description = req.body.description;
+  
+      if (Object.keys(updateFields).length === 0) {
+        return res.status(400).json({ msg: 'No fields to update' });
+      }
+  
+      const setClause = Object.keys(updateFields).map((field, index) => `${field} = $${index + 1}`).join(', ');
+      const values = Object.values(updateFields);
+  
+      await db.none(`UPDATE lessons SET ${setClause} WHERE id = $${values.length + 1}`, [...values, id]);
+  
+      res.status(200).json({ msg: 'Lesson updated' });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ msg: 'Bad request' });
+    }
+  });
+
+app.delete('/lessons/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        await db.none(`DELETE FROM lessons WHERE id=$1`, id);
+
+        res.status(200).json({ msg: 'lesson deleted' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ msg: 'Bad request' });
+    }
+});
+
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
