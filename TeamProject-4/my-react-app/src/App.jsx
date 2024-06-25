@@ -18,13 +18,19 @@ import LessonsCss from './pages/LessonCss';
 import LessonsJs from './pages/LessonJs';
 import LessonsGitHub from './pages/LessonGitHub';
 import LessonsReact from './pages/LessonReact';
+import { NavbarDefault } from './components/NavbarDefault';
+import UserAvatar from './components/UserAvatar';
 
 function App() {
     return (
         <AuthProvider>
             <Router>
-                <div className="main-content">
-                    <LogoPage />
+            <nav className='flex justify-content-between'>
+                        <LogoPage />
+                        <NavbarDefault />
+                        <UserAvatar username="Login"></UserAvatar>
+                    </nav>
+                <div className="main-content">                         
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/login" element={<LoginPage />} />
@@ -36,11 +42,11 @@ function App() {
                         <Route path="/edit" element={<ProtectedRoute element={Edit} />} />
                         <Route path="/avatar-settings" element={<ProtectedRoute element={AvatarSettings} />} />
                         <Route path="/menu-lessons" element={<ProtectedRoute element={LessonsMenu} />} />
-                        <Route path="/menu-lessons/html" element={<ProtectedRoute element={LessonsHtml}/>} />
-                        <Route path='/menu-lessons/css' element={<ProtectedRoute element={LessonsCss}/>} />
-                        <Route path='/menu-lessons/javascript' element={<ProtectedRoute element={LessonsJs}/>} />
-                        <Route path='/menu-lessons/git' element={<ProtectedRoute element={LessonsGitHub}/>} />
-                        <Route path='/menu-lessons/react' element={<ProtectedRoute element={LessonsReact}/>} />
+                        <Route path="/menu-lessons/html" element={<ProtectedRoute element={LessonsHtml} />} />
+                        <Route path="/menu-lessons/css" element={<ProtectedRoute element={LessonsCss} />} />
+                        <Route path="/menu-lessons/javascript" element={<ProtectedRoute element={LessonsJs} />} />
+                        <Route path="/menu-lessons/git" element={<ProtectedRoute element={LessonsGitHub} />} />
+                        <Route path="/menu-lessons/react" element={<ProtectedRoute element={LessonsReact} />} />
                     </Routes>
                 </div>
             </Router>

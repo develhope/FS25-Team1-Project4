@@ -15,47 +15,57 @@ export default function Content() {
         <div>
             <BackgroundImage />
             {/* <NavbarDefault /> */}
+            <div className='content-card-container '>
+            <div className='card1'>    
             <Link to="/menu-lessons">
                 <Card
                     style={
-                        'bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6 mx-auto absolute bottom-[16rem] left-[22rem] transform -translate-x-1/2 -translate-y-1/2 w-[14rem] transition-transform duration-700 ease-in-out transform hover:scale-150 hover:from-blue-400 hover:to-teal-300'
+                         'w-48  bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6  absolute  transition-transform duration-700 ease-in-out transform hover:scale-150 hover:from-blue-400 hover:to-teal-300'
                     }
                     imageUrl={Icona2}
                     text="Lessons"
                     edit={0}
                 />
             </Link>
+            </div>
+            <div className='card2'>
             <Link to="/exercise">
                 <Card
                     style={
-                        'bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6 mx-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[14rem] transition-transform duration-700 ease-in-out transform hover:scale-150 hover:from-blue-400 hover:to-teal-300'
+                        'w-48  bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6 mx-auto absolute transition-transform duration-700 ease-in-out transform hover:scale-150 hover:from-blue-400 hover:to-teal-300'
                     }
                     imageUrl={Icona1}
                     text="Exercise"
                     edit={0}
                 ></Card>
             </Link>
+            </div>
+            <div className='card3'>
             <Link>
                 <Card
                     style={
-                        'bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6 mx-auto absolute bottom-[16rem] right-[8rem] transform -translate-x-1/2 -translate-y-1/2 w-[14rem] transition-transform duration-700 ease-in-out transform hover:scale-150 hover:from-blue-400 hover:to-teal-300'
+                        'w-48  bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6 mx-auto absolute transition-transform duration-700 ease-in-out transform hover:scale-150 hover:from-blue-400 hover:to-teal-300'
                     }
                     imageUrl={Icona3}
                     text="AI Learn"
                     edit={0}
                 ></Card>
             </Link>
+            </div>
+            <div className='card4'>
             <Link to="/edit">
                 <Card
                     style={
-                        'bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6 mx-auto absolute top-3/4 left-1/2 my-10 transform -translate-x-1/2 -translate-y-1/2 w-[10rem] transition-transform duration-700 ease-in-out transform hover:scale-150 hover:from-blue-400 hover:to-teal-300'
+                        'w-48  bg-gradient-to-r from-teal-300 to-blue-400 rounded-[2.5rem] p-6 mx-auto absolute transform -translate-x-1/2 -translate-y-1/2 w-[10rem] transition-transform duration-700 ease-in-out transform hover:scale-150 hover:from-blue-400 hover:to-teal-300'
                     }
                     imageUrl={Icona4}
                     text="Edit"
                     edit={1}
                 ></Card>
             </Link>
-            <UserAvatar username="Login"></UserAvatar>
+            </div>
+            </div>
+            {/* <UserAvatar username="Login"></UserAvatar> */}
         </div>
     );
 }

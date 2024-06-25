@@ -15,8 +15,8 @@ export function RandomImgHome({ img }) {
     }, []);
 
     return (
-        <div className="h-full">
-            <img src={randomImg} className="object-cover w-full h-full" />
+        <div className="h-full hidden sm:block">
+            <img src={randomImg} className="object-cover w-full h-full"/>    
         </div>
     );
 }

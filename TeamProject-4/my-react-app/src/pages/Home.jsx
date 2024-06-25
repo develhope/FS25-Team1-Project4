@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <div className="h-screen relative">
             <BackgroundImage />
-            <NavbarDefault />
+            {/* <NavbarDefault /> */}
             <div className="w-full flex absolute h-[80%] bottom-0">
                 <HomeText />
                 <RandomImgHome img={img} />

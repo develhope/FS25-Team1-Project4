@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export function NavbarDefault() {
     return (
-        <div className="navbar">
-            <ul>
+        <div className="z-10">
+            <ul className='flex'>
                 <li className="hover:text-[#034d8f] hover:bg-[#bff3e5] px-3 py-2 rounded-lg transition duration-300 ease-in-out">
                     <Link to="/">
                         <b>Home</b>
