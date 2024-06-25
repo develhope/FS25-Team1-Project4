@@ -7,17 +7,22 @@ import logoLogin from '../assets/LogoDefinitivo-removebg-preview.png';
 function LoginPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const { login } = useAuth();
     const navigate = useNavigate();
-    const auth = useAuth();
 
-    function handleLogin(event) {
+    const handleLogin = async (event) => {
         event.preventDefault();
-        if (auth.login(username, password)) {
-            navigate('/content');
-        } else {
-            alert('Credenziali non valide');
+        try {
+            const isLoggedIn = await login(username, password);
+            if (isLoggedIn) {
+                navigate('/content');
+            } else {
+                alert('Credenziali non valide');
+            }
+        } catch (error) {
+            console.error(error);
         }
-    }
+    };
 
     return (
         <div className="flex items-center justify-center h-screen bg-gradient-to-r from-green-400 to-cyan-300">
