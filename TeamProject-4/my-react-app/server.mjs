@@ -1,4 +1,4 @@
-import express from 'express';
+/*  import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import pgPromise from 'pg-promise';
@@ -13,27 +13,6 @@ app.use(cors());
 app.use(express.json());
 
 const db = pgPromise()('postgresql://users_owner:IZwrn1bTBU3K@ep-shrill-lake-a2h9f28b.eu-central-1.aws.neon.tech/users?sslmode=require');
-
-const setupDb = async () => {
-    await db.none(` DROP TABLE IF EXISTS users`);
-    await db.none(`
-            CREATE TABLE users (
-            id SERIAL NOT NULL PRIMARY KEY,
-            name TEXT NOT NULL,
-            email TEXT NOT NULL,
-            role TEXT NOT NULL,
-            vote REAL DEFAULT NULL
-        )
-        `);
-
-    // await db.none(`INSERT INTO users (name, email, role, vote) VALUES ('John Doe', 'john.doe@example.com', 'admin', )`);
-    // await db.none(`INSERT INTO users (name, email, role, vote) VALUES ('Jane Doe', 'jane.doe@example.com', 'student', '4')`);
-    // await db.none(`INSERT INTO users (name, email, role, vote) VALUES ('Mario Rossi','mario.rossi@example.com', 'student')`);
-    // await db.none(`INSERT INTO users (name, email, role, vote) VALUES ('Tizio Caio', 'tizio.caio@example.com', 'student')`);
-    // await db.none(`INSERT INTO users (name, email, role, vote) VALUES ('Luigi Bianchi', 'luigi.bianchi@example.com', 'student')`);
-};
-
-// setupDb();
 
 app.get('/users', async (req, res) => {
     try {
@@ -170,4 +149,24 @@ app.delete('/lessons/:id', async (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
-});
+});*/
+
+
+
+import express from 'express';
+import cors from 'cors';
+import UserRouter from './routes/user.route.js';
+import LessonRouter from './routes/lesson.route.js';
+import { errorHandler } from './utils/error.handler.js';
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+app.use(UserRouter);
+app.use(LessonRouter);
+app.use(errorHandler);
+
+app.listen(3001, () => {
+  console.log('Server started on port 3001');
+})

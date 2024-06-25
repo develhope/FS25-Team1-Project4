@@ -25,10 +25,11 @@ function ContentForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        createNewUser();
+        createNewLesson();
+        alert('Lezione creata con successo')
     };
 
-    const createNewUser = () => {
+    const createNewLesson = () => {
         // Make a POST request to the API
         fetch('http://localhost:3001/lessons', {
             method: 'POST',
