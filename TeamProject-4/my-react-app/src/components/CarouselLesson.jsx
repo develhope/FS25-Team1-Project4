@@ -1,27 +1,32 @@
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-spring-3d-carousel';
-import { useState, useEffect } from 'react';
 import { config } from 'react-spring';
 
-export function CarouselLesson(props) {
-    const table = props.cards.map((element, index) => {
-        return { ...element, onClick: () => setGoToSlide(index) };
-    });
-
+export function CarouselLesson({ cards, height, width, margin, offset, showArrows }) {
     const [offsetRadius, setOffsetRadius] = useState(4);
-    const [showArrows, setShowArrows] = useState(false);
-    const [goToSlide, setGoToSlide] = useState(null);
-    const [cards] = useState(table);
+    const [goToSlide, setGoToSlide] = useState(0);
 
     useEffect(() => {
-        setOffsetRadius(props.offset);
-        setShowArrows(props.showArrows);
-    }, [props.offset, props.showArrows]);
+        setOffsetRadius(offset);
+    }, [offset]);
+
+    const handleCardClick = (index) => {
+        setGoToSlide(index);
+    };
+
+    const slides = cards.map((element, index) => ({
+        key: element.key,
+        content: (
+            <div onClick={() => handleCardClick(index)}>
+                {element.content}
+            </div>
+        ),
+    }));
 
     return (
-        <div style={{ width: props.width, height: props.height, margin: props.margin, position: 'absolute', top: 200, left: 0 }}>
+        <div style={{ width, height, margin, position: 'absolute', top: 200, left: 0 }}>
             <Carousel
-                initialslides={0}
-                slides={cards}
+                slides={slides}
                 goToSlide={goToSlide}
                 offsetRadius={offsetRadius}
                 showNavigation={showArrows}

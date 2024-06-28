@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 import { ButtonCardLesson } from './ButtonCardLesson';
 import { Link } from 'react-router-dom';
 
-export function CardLesson({ video, title, text, link }) {
+export function CardLesson({ video, title, text }) {
     const [show, setShown] = useState(false);
 
     const props3 = useSpring({
