@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BackgroundImage from '../components/BackgroundImage';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
@@ -8,58 +8,39 @@ import { CarouselLesson } from '../components/CarouselLesson';
 const LessonsJs = () => {
     const navigate = useNavigate();
 
-    let cards = [
-        {
-            key: 1,
-            content: (
-                <CardLesson
-                    video="https://www.youtube.com/embed/84TYC44ezIU?si=TbxcG-WwLP1rOsES"
-                    title=" Introduzione a JS"
-                    text="Ecco un introduzione a Javascript nel dettaglio per capire alcuni concetti importanti come client-side, server-side, codice compilato, interpretato, statico e dinamico. "
-                />
-            ),
-        },
-        {
-            key: 2,
-            content: (
-                <CardLesson
-                    video="https://www.youtube.com/embed/JyHtBUU2w5g?si=j012-cNQ-OMgm0va"
-                    title="Le variabili"
-                    text="Scopri come dichiarare, inizializzare e utilizzare variabili per rendere il tuo codice più dinamico ed efficiente. Impareremo la differenza tra var, let e const, e vedremo esempi pratici di come e quando utilizzarli."
-                />
-            ),
-        },
-        {
-            key: 3,
-            content: (
-                <CardLesson
-                    video="https://www.youtube.com/embed/Ld4aYNClh3g?si=9MIbYX0U-KAxQKC6"
-                    title="Numeri e Operarori matematici"
-                    text="Impara a lavorare con i numeri e gli operatori matematici in JavaScript! In questo video, esploreremo le basi dei calcoli aritmetici e delle operazioni matematiche comuni, con esempi pratici per migliorare il tuo codice."
-                />
-            ),
-        },
-        {
-            key: 4,
-            content: (
-                <CardLesson
-                    video="https://www.youtube.com/embed/iGU1zgQ9oLw?si=LheIH0PB4pMKQfPC"
-                    title="Le stringhe di testo"
-                    text=" In questo video, esploreremo le principali operazioni e metodi per manipolare le stringhe, come concatenazione, suddivisione e ricerca. Perfetto per chi vuole padroneggiare la manipolazione del testo nel proprio codice!"
-                />
-            ),
-        },
-        {
-            key: 5,
-            content: (
-                <CardLesson
-                    video="https://www.youtube.com/embed/AnKY6wVOjQo?si=UHEsPY3qdBELgOom"
-                    title="I metodi delle stringhe"
-                    text="n questo video, esploreremo le funzioni più utili per manipolare e gestire le stringhe, come length, toUpperCase(), slice(), replace(), e molte altre. Perfetto per migliorare le tue abilità di programmazione e rendere il tuo codice più efficace!"
-                />
-            ),
-        },
-    ];
+    const [lesson, setLesson] = useState([])
+
+    async function fetchLesson() {
+        try {
+            const response = await fetch('http://localhost:3001/lessons')
+            const data = await response.json()
+
+            console.log(data)
+
+            const filteredData = data.filter(les => les.topic === 'JavaScript')
+
+            console.log(filteredData)
+
+            setLesson(filteredData)
+        } catch (error) {
+            console.error({msg: 'Bad request'})
+        }
+    }
+
+    useEffect(() => {
+        fetchLesson()
+    }, [])
+
+    let cards = lesson.map((lessonItem) => ({
+        key: lessonItem.id, 
+        content: (
+            <CardLesson
+                video={lessonItem.video}
+                title={lessonItem.title}
+                text={lessonItem.description}
+            />
+        ),
+    }));
 
     return (
         <div>
